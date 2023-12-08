@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-# refactoring: needed
+# refactoring: clear
 
 
 # get json events from raw data

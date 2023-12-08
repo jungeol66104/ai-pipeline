@@ -1,5 +1,6 @@
 import json
 from openai import OpenAI
+# refactoring: clear
 
 
 def translator_kr(events_for_translator):

@@ -3,6 +3,7 @@ import json
 import re
 import spiceypy as spice
 from app.db.session import insert_event, insert_timeline, insert_association, query_event_highest_id, query_timeline_highest_id, query_timeline_by_name
+# refactoring: needed (additional crawling logic)
 
 dir_processor = os.path.dirname(os.path.realpath(__file__))
 dir_pipeline = os.path.join(dir_processor, '../../')
@@ -51,6 +52,9 @@ def layer1_processor(events_packet):
         event["ko_name"] = event.pop("name")
         event["ko_description"] = event.pop("description")
 
+    timelines_kr = timeline_from_db[:]
+    timelines_kr[0]["id"] = timeline_next_id
+
     events_for_storage = events_invalid
     with open(events_packet_storage_json_path, 'r', encoding='utf-8') as file:
         original_events_packet = json.load(file)
@@ -62,7 +66,7 @@ def layer1_processor(events_packet):
     # (later)
     events_for_crawler = events_invalid
     print('\tlayer1_processor complete')
-    return [events_for_translator, events_for_crawler]
+    return [timelines_kr, events_for_translator, events_for_crawler]
 
 
 def get_is_date_valid(input_string):

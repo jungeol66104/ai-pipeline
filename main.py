@@ -4,6 +4,7 @@ from app.ai.translator_kr import translator_kr
 from app.processor.layer0_processor import layer0_processor
 from app.processor.layer1_processor import layer1_processor
 from app.processor.layer2_processor import layer2_processor
+# refactoring: needed (additional crawling logic)
 
 
 def run_pipeline(title=""):
@@ -12,9 +13,9 @@ def run_pipeline(title=""):
         wikipedia_crawler(title)
     end, text_packet = layer0_processor()
     events_packet = simaqian(text_packet)
-    events_for_translator, events_for_crawler = layer1_processor(events_packet)
+    timelines_kr, events_for_translator, events_for_crawler = layer1_processor(events_packet)
     events_kr = translator_kr(events_for_translator)
-    layer2_processor(events_kr)
+    layer2_processor(timelines_kr, events_kr)
     # if len(events_for_crawler) != 0:
     #     crawler(events_for_crawler)
     #     run_pipeline()
