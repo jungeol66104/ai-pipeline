@@ -1,0 +1,427 @@
+[
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "1984-XX-XX",
+        "name": "Phone Call to Jonathan Greenberg",
+        "description": "In 1984, Donald Trump called journalist Jonathan Greenberg, pretending to be a fictional Trump Organization official named 'John Barron', to falsely assert his wealth for Forbes rankings.",
+        "importance": 600
+      },
+      {
+        "date": "1982-XX-XX",
+        "name": "Appearance on Forbes List",
+        "description": "In 1982, Donald Trump made the initial Forbes list of wealthy people for holding a share of his family's estimated $200 million net worth.",
+        "importance": 550
+      },
+      {
+        "date": "1992-XX-XX",
+        "name": "Formation of All County Building Supply & Maintenance Corp",
+        "description": "In 1992, Donald Trump, along with his siblings and cousin, formed All County Building Supply & Maintenance Corp, which was alleged to have been a shell company for paying vendors providing services and supplies for Trump's rental units.",
+        "importance": 500
+      },
+      {
+        "date": "1996-XX-XX",
+        "name": "Ownership of Miss Universe Pageants",
+        "description": "From 1996 to 2015, Donald Trump owned all or part of the Miss Universe pageants, including Miss USA and Miss Teen USA.",
+        "importance": 450
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Co-founding of Trump University",
+        "description": "In 2004, Donald Trump co-founded Trump University, a company that sold real estate training courses.",
+        "importance": 400
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Establishment of the Donald J. Trump Foundation",
+        "description": "The Donald J. Trump Foundation was a private foundation established in 1988, which later faced legal and ethical controversies.",
+        "importance": 300
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "1968-XX-XX",
+        "name": "Employment at Trump Management",
+        "description": "In 1968, Donald Trump was employed at his father's real estate company, Trump Management, which owned racially segregated middle-class rental housing in New York City's outer boroughs.",
+        "importance": 400
+      },
+      {
+        "date": "1971-XX-XX",
+        "name": "President of Trump Management",
+        "description": "In 1971, Donald Trump became president of Trump Management and began using the Trump Organization as an umbrella brand.",
+        "importance": 450
+      },
+      {
+        "date": "1980-XX-XX",
+        "name": "Renovation of the Commodore Hotel",
+        "description": "In 1980, Donald Trump obtained rights to develop Trump Tower, a mixed-use skyscraper in Midtown Manhattan, after the renovation of the derelict Commodore Hotel.",
+        "importance": 500
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Acquisition of the Plaza Hotel",
+        "description": "In 1988, Donald Trump acquired the Plaza Hotel with a loan from a consortium of sixteen banks.",
+        "importance": 480
+      },
+      {
+        "date": "1995-XX-XX",
+        "name": "Foundation of Trump Hotels & Casino Resorts",
+        "description": "In 1995, Donald Trump founded Trump Hotels & Casino Resorts, assuming ownership of the Trump Plaza.",
+        "importance": 520
+      },
+      {
+        "date": "1996-XX-XX",
+        "name": "Acquisition of 40 Wall Street",
+        "description": "In 1996, Donald Trump acquired the mostly vacant 71-story skyscraper at 40 Wall Street, later rebranded as the Trump Building.",
+        "importance": 490
+      },
+      {
+        "date": "1999-XX-XX",
+        "name": "Start of Trump Organization's Golf Courses",
+        "description": "In 1999, the Trump Organization began building and buying golf courses, owning fourteen and managing another three Trump-branded courses worldwide.",
+        "importance": 430
+      },
+      {
+        "date": "1983-XX-XX",
+        "name": "Purchase of the New Jersey Generals",
+        "description": "In September 1983, Donald Trump purchased the New Jersey Generals, a team in the United States Football League.",
+        "importance": 420
+      },
+      {
+        "date": "2011-XX-XX",
+        "name": "Speculation about Running for President",
+        "description": "In 2011, Donald Trump speculated about running against President Barack Obama in the 2012 election, making his first speaking appearance at the Conservative Political Action Conference (CPAC).",
+        "importance": 550
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "1985-XX-XX",
+        "name": "Trump's cameo appearances in films and television shows",
+        "description": "Trump made cameo appearances in many films and television shows from 1985 to 2001, showcasing his presence in the entertainment industry.",
+        "importance": 300
+      },
+      {
+        "date": "2007-XX-XX",
+        "name": "Trump's appearance at WrestleMania 23",
+        "description": "Trump appeared at WrestleMania 23 in 2007 and was inducted into the celebrity wing of the WWE Hall of Fame in 2013, demonstrating his involvement in the world of professional wrestling.",
+        "importance": 250
+      },
+      {
+        "date": "2011-XX-XX",
+        "name": "Speculation about running for President in 2012",
+        "description": "In 2011, Trump speculated about running against President Barack Obama in the 2012 election, showing his early interest in presidential campaigns.",
+        "importance": 200
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Presidential debates with Hillary Clinton",
+        "description": "Trump and Clinton faced off in three presidential debates in September and October 2016, marking a significant moment in the 2016 presidential election.",
+        "importance": 350
+      },
+      {
+        "date": "2020-11-XX",
+        "name": "Pardons and commutations",
+        "description": "From 2017 to 2020, Trump granted pardons and commutations to various individuals, including those with personal or political connections to him, generating significant controversy.",
+        "importance": 400
+      },
+      {
+        "date": "2020-12-XX",
+        "name": "Pardons in the last full day in office",
+        "description": "On his last full day in office, Trump granted 73 pardons, including to individuals like Steve Bannon and Trump fundraiser Elliott Broidy, leading to widespread discussion and debate.",
+        "importance": 350
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Immigration policies and travel ban",
+        "description": "Trump's proposed immigration policies and the travel ban on citizens of certain countries sparked intense debate and legal challenges, shaping his administration's approach to immigration.",
+        "importance": 450
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": []
+  },
+  {
+    "title": "Donald Trump",
+    "events": []
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2020-06-XX",
+        "name": "Trump's comments on COVID-19 testing",
+        "description": "In June and July, Trump made several statements suggesting that the U.S. should do less testing for COVID-19 to reduce the number of reported cases, despite the CDC's guideline recommending quick identification and testing of anyone exposed to the virus, even if asymptomatic. These comments sparked controversy and raised concerns about the administration's handling of the pandemic.",
+        "importance": 850
+      },
+      {
+        "date": "2020-08-XX",
+        "name": "CDC guideline change on testing",
+        "description": "In August 2020, the CDC quietly lowered its recommendation for testing, advising that people exposed to the virus but not showing symptoms may not necessarily need a test. This change was made under political pressure from the Trump administration and against the CDC scientists' wishes, leading to further criticism and questions about the handling of the pandemic.",
+        "importance": 800
+      },
+      {
+        "date": "2017-01-XX",
+        "name": "Russian interference in 2016 election",
+        "description": "In January 2017, American intelligence agencies jointly stated with high confidence that the Russian government interfered in the 2016 presidential election to favor the election of Trump. This revelation raised widespread concerns and triggered investigations into potential collusion between the Trump campaign and Russia.",
+        "importance": 1000
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2023-03-XX",
+        "name": "Trump collaborates with incarcerated rioters on a song",
+        "description": "In March 2023, Trump collaborated with incarcerated rioters on a song to benefit the prisoners, showcasing a controversial and unexpected development in his post-presidential activities.",
+        "importance": 700
+      },
+      {
+        "date": "2021-05-XX",
+        "name": "Trump and his supporters attempt to co-opt the term 'big lie'",
+        "description": "In May 2021, Trump and his supporters attempted to co-opt the term 'big lie', reflecting ongoing efforts to shape the narrative around the 2020 election.",
+        "importance": 700
+      },
+      {
+        "date": "2022-XX-XX",
+        "name": "Trump Media & Technology Group (TMTG) under investigation",
+        "description": "As of March 2023, Trump Media, which had taken $8 million from Russia-connected entities, was being investigated by federal prosecutors for possible money laundering, raising concerns about Trump's post-presidential business activities.",
+        "importance": 850
+      },
+      {
+        "date": "2023-XX-XX",
+        "name": "Ongoing probes into Trump's actions and business dealings",
+        "description": "Trump is the subject of numerous probes into his actions and business dealings before, during, and after his presidency, indicating the ongoing legal challenges and controversies surrounding his conduct.",
+        "importance": 800
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2020-08-xx",
+        "name": "Trump officially became the Republican nominee",
+        "description": "In August 2020, Trump officially became the Republican nominee for the presidential election.",
+        "importance": 750
+      },
+      {
+        "date": "2021-10-xx",
+        "name": "Trump announced planned merger of TMTG with Digital World Acquisition",
+        "description": "In October 2021, Trump announced the planned merger of Trump Media & Technology Group (TMTG) with Digital World Acquisition, a special-purpose acquisition company (SPAC).",
+        "importance": 700
+      },
+      {
+        "date": "2022-02-xx",
+        "name": "TMTG launched Truth Social",
+        "description": "In February 2022, Trump Media & Technology Group (TMTG) launched Truth Social, a Twitter-like social-media platform.",
+        "importance": 700
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2023-XX-XX",
+        "name": "Class action lawsuit for fraud",
+        "description": "This event needs further information to determine the date and provide a detailed description.",
+        "importance": 500
+      },
+      {
+        "date": "2023-XX-XX",
+        "name": "New York State's civil fraud case",
+        "description": "This event needs further information to determine the date and provide a detailed description.",
+        "importance": 550
+      },
+      {
+        "date": "2023-XX-XX",
+        "name": "E. Jean Carroll's lawsuits",
+        "description": "This event needs further information to determine the date and provide a detailed description.",
+        "importance": 600
+      },
+      {
+        "date": "2024-XX-XX",
+        "name": "2024 presidential campaign",
+        "description": "This event needs further information to determine the date and provide a detailed description.",
+        "importance": 700
+      },
+      {
+        "date": "2021-XX-XX",
+        "name": "Public image rankings",
+        "description": "This event needs further information to determine the date and provide a detailed description.",
+        "importance": 800
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2024-XX-XX",
+        "name": "E. Jean Carroll's lawsuits",
+        "description": "E. Jean Carroll, an American journalist, filed lawsuits against Donald Trump for defamation in connection with her allegations of sexual assault. The lawsuits gained attention during Trump's 2024 presidential campaign.",
+        "importance": 800
+      },
+      {
+        "date": "2024-XX-XX",
+        "name": "2024 presidential campaign",
+        "description": "Donald Trump ran for president in 2024, seeking to regain the presidency after previously serving as the 45th president of the United States.",
+        "importance": 900
+      },
+      {
+        "date": "2021-XX-XX",
+        "name": "C-SPAN Presidential Historians Survey",
+        "description": "C-SPAN conducted a survey ranking Donald Trump fourth-lowest overall in their Presidential Historians Survey 2021. Trump was rated lowest in the leadership characteristics categories for moral authority and administrative skills.",
+        "importance": 600
+      },
+      {
+        "date": "2022-XX-XX",
+        "name": "Siena College Research Institute Survey",
+        "description": "The Siena College Research Institute (SCRI) ranked Donald Trump 43rd out of 45 presidents in their 2022 survey. Trump was ranked poorly in various categories such as background, integrity, intelligence, foreign policy accomplishments, and executive appointments.",
+        "importance": 650
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Gallup Poll - Most Admired Man",
+        "description": "In 2017, Donald Trump placed second to Barack Obama in Gallup's annual poll asking Americans to name the man they admire the most. Trump's rankings in subsequent years varied, including being named most admired in 2020.",
+        "importance": 550
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Trump's False and Misleading Statements",
+        "description": "Throughout his candidacy and presidency, Donald Trump frequently made false statements, which became a distinctive part of his political identity. This included a record-high number of falsehoods documented by fact-checkers, particularly during his final year in office.",
+        "importance": 750
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "Disinformation on Mail-in Voting and COVID-19 Pandemic",
+        "description": "In 2020, Trump promoted disinformation on mail-in voting and the COVID-19 pandemic, which had consequences on public faith in the integrity of the election and the national response to the pandemic.",
+        "importance": 700
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "International Approval Ratings",
+        "description": "A Gallup poll in 134 countries comparing the approval ratings of U.S. leadership found that Trump led Obama in job approval in only 29 countries, with approval plummeting among allies and G7 countries.",
+        "importance": 600
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Promotion of Conspiracy Theories",
+        "description": "Donald Trump promoted various conspiracy theories before and throughout his presidency, including the Obama birtherism, Global warming hoax, and conspiracy theories related to the 2020 presidential election.",
+        "importance": 700
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Effect on Hate Crimes",
+        "description": "Research suggests that Trump's rhetoric caused an increased incidence of hate crimes, with instances of violent acts and hate crimes citing Trump's rhetoric, including the storming of the U.S. Capitol in 2021.",
+        "importance": 750
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Social Media Presence",
+        "description": "Trump's social media presence, particularly on Twitter, attracted worldwide attention and became a direct means of communication with the public, shaping events and promoting misinformation.",
+        "importance": 650
+      },
+      {
+        "date": "2019-XX-XX",
+        "name": "Media Dominance and Accusations of Bias",
+        "description": "During his candidacy and presidency, Trump benefited from a record amount of free media coverage, while frequently accusing the press of bias and intentionally discrediting the media.",
+        "importance": 600
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Racist and Misogynistic Allegations",
+        "description": "Many of Trump's comments and actions have been considered racist and misogynistic, with several instances of promoting racist conspiracy theories and facing allegations of housing discrimination and racist attitudes.",
+        "importance": 800
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2017-08-XX",
+        "name": "Comments on 2017 far-right rally in Charlottesville, Virginia",
+        "description": "In 2017, Donald Trump condemned the display of hatred, bigotry, and violence on many sides following the far-right rally in Charlottesville, Virginia. His comments were widely criticized for implying a moral equivalence between the white supremacist demonstrators and the counter-protesters.",
+        "importance": 900
+      },
+      {
+        "date": "2018-01-XX",
+        "name": "Oval Office meeting on immigration legislation",
+        "description": "In January 2018, Trump's remarks during an Oval Office meeting to discuss immigration legislation, where he referred to certain countries in a derogatory manner, were condemned as racist.",
+        "importance": 800
+      },
+      {
+        "date": "2019-07-XX",
+        "name": "Tweet about Democratic congresswomen",
+        "description": "In July 2019, Trump's tweet suggesting that four Democratic congresswomen should 'go back' to the countries they 'came from' sparked controversy and led to a House of Representatives vote to condemn his remarks.",
+        "importance": 850
+      },
+      {
+        "date": "2016-10-XX",
+        "name": "2005 'hot mic' recording",
+        "description": "In October 2016, a 2005 'hot mic' recording surfaced in which Trump was heard making lewd comments about women. This incident caused widespread outrage and led to Trump's public apology.",
+        "importance": 920
+      },
+      {
+        "date": "XX-XX-2015",
+        "name": "Hip hop song references",
+        "description": "Donald Trump has been referenced in hundreds of hip hop songs since the 1980s, with the nature of these references turning largely negative after he began running for office in 2015.",
+        "importance": 750
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Appearance on C-SPAN",
+        "description": "This event refers to Donald Trump's appearance on the television network C-SPAN. He may have discussed various political issues or made public statements during this appearance.",
+        "importance": 800
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Donald Trump on the Internet Archive",
+        "description": "This event likely pertains to the archiving of Donald Trump's online content, including speeches, interviews, and other media appearances, by the Internet Archive. This is significant for preserving his digital footprint for historical and research purposes.",
+        "importance": 750
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Appearances on C-SPAN",
+        "description": "This event refers to Donald Trump's appearances on C-SPAN, a public service television network in the United States. It is likely that he appeared on the network for various interviews, speeches, or public appearances.",
+        "importance": 750
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Donald Trump on the Internet Archive",
+        "description": "This event involves Donald Trump's presence on the Internet Archive, a digital library that offers access to archived web pages, books, music, and videos. It is likely that Trump's speeches, interviews, or other media appearances are preserved in the Internet Archive's collection.",
+        "importance": 800
+      }
+    ]
+  },
+  {
+    "title": "Donald Trump",
+    "events": []
+  },
+  {
+    "title": "Donald Trump",
+    "events": []
+  }
+]
