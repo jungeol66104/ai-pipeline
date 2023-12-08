@@ -7,6 +7,7 @@ from app.processor.layer2_processor import layer2_processor
 
 
 def run_pipeline(title=""):
+    print('\nCYCLE START')
     if title != "":
         wikipedia_crawler(title)
     end, text_packet = layer0_processor()
@@ -17,6 +18,7 @@ def run_pipeline(title=""):
     # if len(events_for_crawler) != 0:
     #     crawler(events_for_crawler)
     #     run_pipeline()
+    print('CYCLE END')
     if not end:
         run_pipeline()
 

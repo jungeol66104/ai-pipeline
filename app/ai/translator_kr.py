@@ -11,14 +11,8 @@ def translator_kr(events_for_translator):
         model="gpt-3.5-turbo-1106",
         response_format={"type": "json_object"},
         messages=[
-            {
-                "role": "system",
-                "content": prompt
-            },
-            {
-                "role": "user",
-                "content": f"{events_for_translator}"
-            }
+            {"role": "system", "content": prompt},
+            {"role": "user", "content": f"{events_for_translator}"}
         ],
         temperature=0.2,
         max_tokens=4095,
@@ -26,19 +20,16 @@ def translator_kr(events_for_translator):
         frequency_penalty=0,
         presence_penalty=0
     )
+
     content = json.loads(response.choices[0].message.content)
     events_kr = list(content.values())
     if len(events_for_translator) == len(events_kr):
         for index, event in enumerate(events_kr):
             event["id"] = events_for_translator[index]["id"]
-        return events_kr
     else:
-        message = f"""
-            Invalid translated output came out.
-            list length: {len(events_for_translator)}/{len(events_kr)}
-            repeating round.       
-        """
+        message = f"\t\tInvalid translated output came out.\n\t\tlist length: {len(events_for_translator)}/{len(events_kr)}\n\t\trepeating round."
         print("output: ", content)
         print(message)
         events_kr = translator_kr(events_for_translator)
-        return events_kr
+    print("\ttranslator_kr complete")
+    return events_kr

@@ -15,15 +15,6 @@ connection = engine.connect()
 
 
 # insert
-def insert_test(events):
-    try:
-        db.bulk_insert_mappings(Test, events)
-        db.commit()
-    except Exception as e:
-        db.rollback()
-        print(e)
-
-
 def insert_timeline(timelines):
     try:
         db.bulk_insert_mappings(Timeline, timelines)
@@ -62,6 +53,3 @@ def query_timeline_highest_id():
 
 def query_event_highest_id():
     return db.query(func.max(Event.id)).scalar()
-
-def query_test_highest_id():
-    return db.query(func.max(Test.id)).scalar()

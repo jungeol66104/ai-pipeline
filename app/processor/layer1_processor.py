@@ -2,8 +2,7 @@ import os
 import json
 import re
 import spiceypy as spice
-from app.db.session import insert_event, insert_timeline, insert_association, query_event_highest_id, \
-    query_timeline_highest_id, insert_test, query_test_highest_id, query_timeline_by_name
+from app.db.session import insert_event, insert_timeline, insert_association, query_event_highest_id, query_timeline_highest_id, query_timeline_by_name
 
 dir_processor = os.path.dirname(os.path.realpath(__file__))
 dir_pipeline = os.path.join(dir_processor, '../../')
@@ -42,7 +41,7 @@ def layer1_processor(events_packet):
     insert_timeline(timelines_for_db)
     insert_event(events_for_db)
     insert_association(associations_for_db)
-    print('Inserted timelines, events, associations to the DB.')
+    print('\t\tInserted timelines, events, associations to the DB.')
 
     # make events for translator
     events_for_translator = events_for_db[:]
@@ -62,7 +61,7 @@ def layer1_processor(events_packet):
 
     # (later)
     events_for_crawler = events_invalid
-
+    print('\tlayer1_processor complete')
     return [events_for_translator, events_for_crawler]
 
 

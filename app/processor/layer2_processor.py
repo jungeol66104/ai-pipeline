@@ -14,3 +14,5 @@ def layer2_processor(events_kr):
 
     with open(events_kr_storage_path, 'w', encoding='utf-8') as file:
         json.dump(new_events_kr, file, ensure_ascii=False, indent=2)
+    print('\tlayer2_processor complete')
+

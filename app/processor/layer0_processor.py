@@ -39,6 +39,7 @@ def layer0_processor():
     with open(temp_storage_json_path, 'w', encoding='utf-8') as file:
         json.dump(used_raw_datum_texts, file, indent=2)
 
+    print('\tlayer0_processor complete')
     return [end, text_packet]
 
 

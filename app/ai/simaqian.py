@@ -29,4 +29,5 @@ def simaqian(text_packet):
     events = list(content.values())
     events_packet = {"title": title, "events": events}
 
+    print('\tsimaqian complete')
     return events_packet

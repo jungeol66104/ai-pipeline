@@ -27,7 +27,7 @@ def wikipedia_crawler(title):
 
     with open(raw_data_storage_json_path, 'w', encoding='utf-8') as file:
         json.dump(new_raw_data, file, ensure_ascii=False, indent=2)
-
+    print('\twikipedia_crawler complete')
 
 def split_by_newline(text):
     texts = re.split(r'\r?\n|\r', text)
