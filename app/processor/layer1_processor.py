@@ -28,7 +28,7 @@ def layer1_processor(events_packet):
     timeline_next_id = timeline_from_db.id if timeline_from_db else query_timeline_highest_id() + 1
     event_next_id = query_event_highest_id() + 1
 
-    timelines_for_db = [{"name": events_packet["title"]}]
+    timelines_for_db = [{"id": timeline_next_id, "name": events_packet["title"]}]
     events_for_db = events_valid[:]
     associations_for_db = []
 
@@ -43,6 +43,7 @@ def layer1_processor(events_packet):
     insert_event(events_for_db)
     insert_association(associations_for_db)
     print('\t\tInserted timelines, events, associations to the DB.')
+    # data_for_db = {"timelines_for_db": timelines_for_db, "events_for_db": events_for_db, "associations_for_db": associations_for_db}
 
     # make events for translator
     events_for_translator = events_for_db[:]
@@ -52,8 +53,9 @@ def layer1_processor(events_packet):
         event["ko_name"] = event.pop("name")
         event["ko_description"] = event.pop("description")
 
-    timelines_kr = timeline_from_db[:]
-    timelines_kr[0]["id"] = timeline_next_id
+    timelines_kr = timelines_for_db[:]
+    timelines_kr[0]["timeline_id"] = timelines_kr[0].pop("id")
+    timelines_kr[0]["ko_name"] = timelines_kr[0].pop("name")
 
     events_for_storage = events_invalid
     with open(events_packet_storage_json_path, 'r', encoding='utf-8') as file:

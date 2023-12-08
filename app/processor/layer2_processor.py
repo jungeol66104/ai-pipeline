@@ -24,8 +24,8 @@ def layer2_processor(timelines_kr, events_kr):
         original_timelines_kr = json.load(file)
 
     new_timelines_kr = original_timelines_kr[:]
-    timeline_from_db = query_timeline_by_name(timelines_kr[0]["name"])
-    timeline_from_json = timelines_kr[0]["name"] in [timeline['name'] for timeline in original_timelines_kr]
+    timeline_from_db = query_timeline_by_name(timelines_kr[0]["ko_name"])
+    timeline_from_json = timelines_kr[0]["ko_name"] in [timeline["ko-name"] for timeline in original_timelines_kr]
     if not timeline_from_db and not timeline_from_json:
         new_timelines_kr.append(timelines_kr[0])
 

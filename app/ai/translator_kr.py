@@ -26,7 +26,7 @@ def translator_kr(events_for_translator):
     events_kr = list(content.values())
     if len(events_for_translator) == len(events_kr):
         for index, event in enumerate(events_kr):
-            event["id"] = events_for_translator[index]["id"]
+            event["event_id"] = events_for_translator[index]["id"]
     else:
         message = f"\t\tInvalid translated output came out.\n\t\tlist length: {len(events_for_translator)}/{len(events_kr)}\n\t\trepeating round."
         print("output: ", content)
