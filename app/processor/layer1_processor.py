@@ -2,7 +2,9 @@ import os
 import json
 import re
 import spiceypy as spice
-from app.db.session import insert_event, insert_timeline, insert_association, query_event_highest_id, query_timeline_highest_id, query_timeline_by_name
+from app.db.session import insert_event, insert_timeline, insert_association, query_event_highest_id, \
+    query_timeline_highest_id, query_timeline_by_name, query_association_highest_id
+
 # refactoring: needed (additional crawling logic)
 
 dir_processor = os.path.dirname(os.path.realpath(__file__))
@@ -27,6 +29,7 @@ def layer1_processor(events_packet):
     timeline_from_db = query_timeline_by_name(events_packet["title"])
     timeline_next_id = timeline_from_db.id if timeline_from_db else query_timeline_highest_id() + 1
     event_next_id = query_event_highest_id() + 1
+    association_next_id = query_association_highest_id() + 1
 
     timelines_for_db = [{"id": timeline_next_id, "name": events_packet["title"]}]
     events_for_db = events_valid[:]
@@ -35,15 +38,15 @@ def layer1_processor(events_packet):
     for event in events_for_db:
         event["julian_date"] = get_julian_date(event["date"])
         event["id"] = event_next_id
-        association = {"timeline_id": timeline_next_id, "event_id": event_next_id, "importance": event.pop("importance")}
+        association = {"id": association_next_id, "timeline_id": timeline_next_id, "event_id": event_next_id, "importance": event.pop("importance")}
         associations_for_db.append(association)
         event_next_id += 1
 
-    insert_timeline(timelines_for_db)
+    if not timeline_from_db:
+        insert_timeline(timelines_for_db)
     insert_event(events_for_db)
     insert_association(associations_for_db)
     print('\t\tInserted timelines, events, associations to the DB.')
-    # data_for_db = {"timelines_for_db": timelines_for_db, "events_for_db": events_for_db, "associations_for_db": associations_for_db}
 
     # make events for translator
     events_for_translator = events_for_db[:]

@@ -53,3 +53,7 @@ def query_timeline_highest_id():
 
 def query_event_highest_id():
     return db.query(func.max(Event.id)).scalar()
+
+
+def query_association_highest_id():
+    return db.query(func.max(EventTimelineAssociation.id)).scalar()
