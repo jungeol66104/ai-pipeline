@@ -25,4 +25,4 @@ def run_pipeline(title=""):
 
 
 if __name__ == "__main__":
-    run_pipeline('Donald Trump')
+    run_pipeline('Warren Buffett')

@@ -1,1 +1,1020 @@
-[]
+[
+  {
+    "title": "Donald Trump",
+    "events": [
+      {
+        "date": "2022-11-XX",
+        "name": "Announcement of Trump's Candidacy for 2024 Presidential Election",
+        "description": "In November 2022, Donald Trump announced his candidacy for the Republican nomination in the 2024 presidential election.",
+        "importance": 700
+      },
+      {
+        "date": "2023-XX-XX",
+        "name": "Indictment of Donald Trump",
+        "description": "In 2023, Donald Trump was indicted in New York, Florida, Washington, D.C., and Georgia on various felony counts related to his business records, handling of classified documents, conspiracy, obstruction, and racketeering in an effort to overturn the 2020 election results.",
+        "importance": 950
+      },
+      {
+        "date": "1977-XX-XX",
+        "name": "Marriage to Ivana Zeln\u00ed\u010dkov\u00e1",
+        "description": "In 1977, Donald Trump married Czech model Ivana Zeln\u00ed\u010dkov\u00e1.",
+        "importance": 200
+      },
+      {
+        "date": "2005-XX-XX",
+        "name": "Marriage to Melania Knauss",
+        "description": "In 2005, Donald Trump married Slovenian model Melania Knauss.",
+        "importance": 250
+      },
+      {
+        "date": "2015-XX-XX",
+        "name": "Trump's physician letter",
+        "description": "In 2015, Trump's campaign released a letter from his longtime personal physician, Harold Bornstein, stating that Trump would 'be the healthiest individual ever elected to the presidency'.",
+        "importance": 700
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Bornstein's statement",
+        "description": "In 2018, Bornstein said Trump had dictated the contents of the letter and that three Trump agents had seized his medical records in a February 2017 raid on the doctor's office.",
+        "importance": 600
+      },
+      {
+        "date": "1982-XX-XX",
+        "name": "Forbes list inclusion",
+        "description": "In 1982, Trump made the initial Forbes list of wealthy people for holding a share of his family's estimated $200 million net worth (equivalent to $606 million in 2022).",
+        "importance": 800
+      },
+      {
+        "date": "2015-07-XX",
+        "name": "Financial disclosure report",
+        "description": "After filing the mandatory financial disclosure report with the FEC in July 2015, he announced a net worth of about $10 billion.",
+        "importance": 850
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Forbes estimation",
+        "description": "Forbes estimated his net worth dropped by $1.4 billion between 2015 and 2018. In their 2021 billionaires ranking, Trump's net worth was estimated to be $2.4 billion (1,299th in the world).",
+        "importance": 750
+      },
+      {
+        "date": "1984-XX-XX",
+        "name": "John Barron incident",
+        "description": "Journalist Jonathan Greenberg reported that Trump called him in 1984, pretending to be a fictional Trump Organization official named 'John Barron' to get a higher ranking for himself on the Forbes 400 list of wealthy Americans.",
+        "importance": 600
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Tax fraud investigation",
+        "description": "In 2018, he and his family were reported to have committed tax fraud, and the New York State Department of Taxation and Finance started an investigation.",
+        "importance": 900
+      },
+      {
+        "date": "1985-1994",
+        "name": "Tax returns net losses",
+        "description": "Contrary to his claims of financial health and business acumen, Trump's tax returns from 1985 to 1994 show net losses totaling $1.17 billion.",
+        "importance": 950
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "New York Times tax information",
+        "description": "In 2020, the New York Times obtained Trump's tax information extending over two decades, revealing that Trump reported losses of hundreds of millions of dollars and had, since 2010, deferred declaring $287 million in forgiven debt as taxable income.",
+        "importance": 1000
+      },
+      {
+        "date": "2021-10-XX",
+        "name": "Total debts",
+        "description": "As of October 2021, Trump had over $1.3 billion in total debts, much of which is secured by his assets.",
+        "importance": 900
+      },
+      {
+        "date": "1968-XX-XX",
+        "name": "Employment at Trump Management",
+        "description": "In 1968, Donald Trump started working at his father's real estate company, Trump Management, which owned racially segregated middle-class rental housing in New York City's outer boroughs.",
+        "importance": 800
+      },
+      {
+        "date": "1971-XX-XX",
+        "name": "President of Trump Management",
+        "description": "In 1971, Donald Trump became the president of Trump Management and began using the Trump Organization as an umbrella brand.",
+        "importance": 750
+      },
+      {
+        "date": "1978-XX-XX",
+        "name": "Launch of Grand Hyatt Hotel",
+        "description": "In 1978, Donald Trump attracted public attention with the launch of his family's first Manhattan venture, the renovation of the derelict Commodore Hotel, which reopened in 1980 as the Grand Hyatt Hotel.",
+        "importance": 900
+      },
+      {
+        "date": "1980-XX-XX",
+        "name": "Development of Trump Tower",
+        "description": "In 1980, Donald Trump obtained rights to develop Trump Tower, a mixed-use skyscraper in Midtown Manhattan.",
+        "importance": 950
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Acquisition of Plaza Hotel",
+        "description": "In 1988, Donald Trump acquired the Plaza Hotel with a loan from a consortium of sixteen banks.",
+        "importance": 850
+      },
+      {
+        "date": "1996-XX-XX",
+        "name": "Acquisition of 40 Wall Street",
+        "description": "In 1996, Donald Trump acquired the mostly vacant 71-story skyscraper at 40 Wall Street, later rebranded as the Trump Building, and renovated it.",
+        "importance": 780
+      },
+      {
+        "date": "1984-XX-XX",
+        "name": "Opening of Harrah's at Trump Plaza",
+        "description": "In 1984, Trump opened Harrah's at Trump Plaza, a hotel and casino, with financing and management help from the Holiday Corporation.",
+        "importance": 700
+      },
+      {
+        "date": "1985-XX-XX",
+        "name": "Acquisition of Mar-a-Lago estate",
+        "description": "In 1985, Trump acquired the Mar-a-Lago estate in Palm Beach, Florida.",
+        "importance": 820
+      },
+      {
+        "date": "1999-XX-XX",
+        "name": "Trump Organization began building and buying golf courses",
+        "description": "In 1999, the Trump Organization started its venture into building and purchasing golf courses, marking the beginning of its significant presence in the golf industry.",
+        "importance": 800
+      },
+      {
+        "date": "1983-XX-XX",
+        "name": "Purchase of the New Jersey Generals",
+        "description": "In September 1983, Trump purchased the New Jersey Generals, a team in the United States Football League. This purchase marked his foray into the world of professional football.",
+        "importance": 650
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Purchase of the Eastern Air Lines Shuttle",
+        "description": "In 1988, Trump purchased the Eastern Air Lines Shuttle, which he later renamed Trump Shuttle. This acquisition represented his involvement in the aviation industry.",
+        "importance": 700
+      },
+      {
+        "date": "1992-XX-XX",
+        "name": "Formation of All County Building Supply & Maintenance Corp",
+        "description": "In 1992, Trump and his siblings formed All County Building Supply & Maintenance Corp, which was alleged to have been a shell company for paying vendors providing services and supplies for Trump's rental units. This raised ethical and legal concerns.",
+        "importance": 550
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Co-founding of Trump University",
+        "description": "In 2004, Trump co-founded Trump University, a company that sold real estate training courses. This venture later faced legal challenges and controversies related to its business practices.",
+        "importance": 600
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Establishment of the Donald J. Trump Foundation",
+        "description": "The Donald J. Trump Foundation was established as a private foundation in 1988. In its final years, the foundation faced scrutiny for its funding sources and donations, which mostly came from donors other than Trump himself.",
+        "importance": 750
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Legal Issues Surrounding the Donald J. Trump Foundation",
+        "description": "In 2016, The Washington Post reported potential legal and ethical violations by the Donald J. Trump Foundation, including self-dealing and possible tax evasion. The New York Attorney General also determined the foundation to be in violation of state law for soliciting donations.",
+        "importance": 800
+      },
+      {
+        "date": "2018-06-XX",
+        "name": "Civil Suit Against the Donald J. Trump Foundation",
+        "description": "In June 2018, the New York attorney general's office filed a civil suit against the foundation, Trump, and his adult children, seeking $2.8 million in restitution and additional penalties.",
+        "importance": 850
+      },
+      {
+        "date": "2018-12-XX",
+        "name": "Dissolution of the Donald J. Trump Foundation",
+        "description": "The foundation ceased operation and disbursed its assets to other charities in December 2018.",
+        "importance": 700
+      },
+      {
+        "date": "2019-11-XX",
+        "name": "Court Order for Trump to Pay $2 Million to Charities",
+        "description": "In November 2019, a New York state judge ordered Trump to pay $2 million to a group of charities for misusing the foundation's funds, in part to finance his presidential campaign.",
+        "importance": 900
+      },
+      {
+        "date": "1973-XX-XX",
+        "name": "Trump's Legal Battle with the United States Government",
+        "description": "In 1973, Trump, with the help of Roy Cohn, countersued the United States government for $100 million over charges of racial discriminatory practices. The case ultimately resulted in a settlement.",
+        "importance": 700
+      },
+      {
+        "date": "1987-XX-XX",
+        "name": "The Art of the Deal Publication",
+        "description": "Trump's first book, The Art of the Deal, was published in 1987 and became a New York Times Best Seller. It was written with the help of a ghostwriter, Tony Schwartz.",
+        "importance": 600
+      },
+      {
+        "date": "2007-XX-XX",
+        "name": "Trump's Appearance at WrestleMania 23",
+        "description": "Trump made an appearance at WrestleMania 23 in 2007 and was later inducted into the celebrity wing of the WWE Hall of Fame in 2013.",
+        "importance": 550
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "The Apprentice and The Celebrity Apprentice",
+        "description": "From 2004 to 2015, Trump was the co-producer and host of reality shows The Apprentice and The Celebrity Apprentice, which significantly contributed to his public image and earnings.",
+        "importance": 800
+      },
+      {
+        "date": "2021-02-XX",
+        "name": "Resignation from the Screen Actors Guild",
+        "description": "In February 2021, Trump resigned from the Screen Actors Guild rather than face a disciplinary committee hearing for inciting the January 6, 2021, mob attack on the U.S. Capitol and for his campaign of misinformation aimed at discrediting and threatening journalists.",
+        "importance": 900
+      },
+      {
+        "date": "1987-XX-XX",
+        "name": "Trump's Republican Party Registration",
+        "description": "In 1987, Donald Trump registered as a Republican, marking the beginning of his formal political party affiliation.",
+        "importance": 800
+      },
+      {
+        "date": "1999-XX-XX",
+        "name": "Membership in the Independence Party and the Reform Party",
+        "description": "In 1999, Trump became a member of the Independence Party, the New York state affiliate of the Reform Party, showcasing his varied political affiliations.",
+        "importance": 750
+      },
+      {
+        "date": "2001-XX-XX",
+        "name": "Brief Affiliation with the Democratic Party",
+        "description": "In 2001, Donald Trump briefly registered as a Democrat, reflecting another shift in his political party affiliation.",
+        "importance": 700
+      },
+      {
+        "date": "2009-XX-XX",
+        "name": "Return to the Republican Party",
+        "description": "In 2009, Trump returned to the Republican Party, signaling another change in his political alignment.",
+        "importance": 750
+      },
+      {
+        "date": "2011-XX-XX",
+        "name": "Unaffiliated Status",
+        "description": "In 2011, Trump was unaffiliated with any political party, further highlighting his varied political journey.",
+        "importance": 700
+      },
+      {
+        "date": "2012-XX-XX",
+        "name": "Final Return to the Republican Party",
+        "description": "In 2012, Donald Trump once again registered as a Republican, solidifying his political party affiliation at the time.",
+        "importance": 750
+      },
+      {
+        "date": "1987-XX-XX",
+        "name": "Trump's Views on Foreign Policy and Federal Budget Deficit",
+        "description": "In 1987, Trump expressed his views on foreign policy and strategies to eliminate the federal budget deficit through full-page advertisements in major newspapers.",
+        "importance": 700
+      },
+      {
+        "date": "1988-XX-XX",
+        "name": "Request to be Considered as George H. W. Bush's Running Mate",
+        "description": "In 1988, Donald Trump approached Lee Atwater to be considered for the Republican nominee George H. W. Bush's running mate, although the request was not fulfilled.",
+        "importance": 750
+      },
+      {
+        "date": "2000-02-XX",
+        "name": "Withdrawal from Reform Party Presidential Race",
+        "description": "In February 2000, Trump withdrew from the race for the Reform Party nomination for the 2000 United States presidential election.",
+        "importance": 700
+      },
+      {
+        "date": "2011-XX-XX",
+        "name": "Speculation about Running for President in 2012",
+        "description": "In 2011, Trump speculated about running for president in the 2012 election, making appearances at significant events and early primary states.",
+        "importance": 750
+      },
+      {
+        "date": "2012-02-XX",
+        "name": "Endorsement of Mitt Romney",
+        "description": "In February 2012, Donald Trump announced his endorsement of Mitt Romney for the 2012 presidential election.",
+        "importance": 700
+      },
+      {
+        "date": "2015-06-XX",
+        "name": "Trump announces his candidacy",
+        "description": "Donald Trump announced his candidacy for the 2016 presidential election in June 2015, which was initially not taken seriously by political analysts, but he quickly rose to the top of opinion polls.",
+        "importance": 850
+      },
+      {
+        "date": "2016-05-XX",
+        "name": "Trump declared presumptive Republican nominee",
+        "description": "In May 2016, Donald Trump was declared the presumptive Republican nominee for the 2016 presidential election.",
+        "importance": 900
+      },
+      {
+        "date": "2016-07-XX",
+        "name": "Trump narrows the gap with Clinton in national polling averages",
+        "description": "In early July 2016, Donald Trump narrowed the gap with Hillary Clinton in national polling averages.",
+        "importance": 800
+      },
+      {
+        "date": "2016-07-XX",
+        "name": "Trump selects Mike Pence as his vice presidential running mate",
+        "description": "In mid-July 2016, Donald Trump selected Indiana governor Mike Pence as his vice presidential running mate.",
+        "importance": 820
+      },
+      {
+        "date": "2016-09-XX",
+        "name": "Trump and Clinton face off in presidential debates",
+        "description": "Donald Trump and Hillary Clinton faced off in three presidential debates in September and October 2016.",
+        "importance": 870
+      },
+      {
+        "date": "2016-10-XX",
+        "name": "Portions of Trump's state filings for 1995 leaked",
+        "description": "In October 2016, portions of Donald Trump's state filings for 1995 were leaked to a reporter from The New York Times, showing that Trump had declared a loss of $916 million that year.",
+        "importance": 780
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Trump moved his businesses into a revocable trust",
+        "description": "Before being inaugurated, Trump moved his businesses into a revocable trust run by his sons, Eric and Donald Jr., and a business associate. This was done to avoid potential conflicts of interest.",
+        "importance": 800
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Trump Organization pursued expansions in Dubai, Scotland, and the Dominican Republic",
+        "description": "The Trump Organization pursued expansions of its operations in Dubai, Scotland, and the Dominican Republic despite Trump's statement that he would eschew 'new foreign deals'. This raised concerns about potential conflicts of interest.",
+        "importance": 750
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Trump sued for violating the Domestic and Foreign Emoluments Clauses",
+        "description": "Trump was sued for violating the Domestic and Foreign Emoluments Clauses of the U.S. Constitution, marking the first time that the clauses had been substantively litigated. The lawsuits alleged that Trump continued to profit from his businesses and benefited from his administration's policies, raising ethical concerns.",
+        "importance": 950
+      },
+      {
+        "date": "2017-12-XX",
+        "name": "Signing of the Tax Cuts and Jobs Act of 2017",
+        "description": "In December 2017, Trump signed the Tax Cuts and Jobs Act of 2017, which was passed by the Republican-controlled chambers of Congress. The act reduced tax rates for businesses and individuals, with business tax cuts to be permanent and individual tax cuts set to expire after 2025, and eliminated the penalty associated with Affordable Care Act's individual mandate.",
+        "importance": 800
+      },
+      {
+        "date": "2020-02-XX",
+        "name": "Start of the COVID-19 recession",
+        "description": "The COVID-19 recession began in February 2020, marking the end of the longest economic expansion in American history that started in June 2009. This recession had significant impacts on the global economy.",
+        "importance": 900
+      },
+      {
+        "date": "2017-06-XX",
+        "name": "Withdrawal from Paris Agreement",
+        "description": "In June 2017, Trump announced the withdrawal of the United States from the Paris Agreement, making the U.S. the only nation in the world to not ratify the agreement. This decision had significant global implications for climate change efforts and international cooperation.",
+        "importance": 1000
+      },
+      {
+        "date": "2017-01-XX",
+        "name": "Executive Order 13771",
+        "description": "In January 2017, Trump signed Executive Order 13771, which directed federal agencies to identify two existing regulations for elimination for every new regulation. This order had far-reaching effects on the deregulation efforts across various federal agencies.",
+        "importance": 800
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Rollback of Federal Environmental Regulations",
+        "description": "During his presidency, Trump rolled back more than 100 federal environmental regulations, including those that curbed greenhouse gas emissions, air and water pollution, and the use of toxic substances. This had a significant impact on environmental protection and climate change mitigation efforts.",
+        "importance": 950
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Expansion of Natural Gas and Decline of Coal",
+        "description": "Under Trump, natural gas expanded while coal continued to decline. This shift in the energy landscape had economic and environmental implications, impacting the fossil fuel industry and efforts to reduce carbon emissions.",
+        "importance": 850
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Dismantling of Federal Regulations",
+        "description": "Trump dismantled many federal regulations on health, labor, and the environment, among other topics. This had wide-ranging effects on various sectors, including public health, workplace safety, and environmental protection.",
+        "importance": 900
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Congressional Review Act Resolutions",
+        "description": "Trump signed 14 Congressional Review Act resolutions repealing federal regulations, including a bill that made it easier for severely mentally ill persons to buy guns. These actions had significant implications for public safety and regulatory oversight.",
+        "importance": 850
+      },
+      {
+        "date": "2018-06-XX",
+        "name": "Legal Argument Against ACA",
+        "description": "In June 2018, the Trump administration joined 18 Republican-led states in arguing before the Supreme Court that the elimination of the financial penalties associated with the individual mandate had rendered the ACA unconstitutional, potentially affecting health insurance coverage for millions of Americans.",
+        "importance": 850
+      },
+      {
+        "date": "2020-01-XX",
+        "name": "Proposed Cuts to Medicare and Social Safety-net Programs",
+        "description": "In January 2020, Trump suggested he was willing to consider cuts to Medicare and other social safety-net programs, despite his previous promise to protect their funding.",
+        "importance": 750
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Legislation for Opioid Epidemic",
+        "description": "In 2018, Trump signed legislation to increase funding for drug treatments in response to the opioid epidemic, but was criticized for the lack of a concrete strategy.",
+        "importance": 700
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Rollback of Workplace Protections for LGBT People",
+        "description": "In March 2017, Trump's administration rolled back key components of the Obama administration's workplace protections against discrimination of LGBT people.",
+        "importance": 600
+      },
+      {
+        "date": "2020-08-XX",
+        "name": "Attempted Rollback of Anti-discrimination Protections for Transgender Patients",
+        "description": "In August 2020, Trump's attempted rollback of anti-discrimination protections for transgender patients was halted by a federal judge after the Supreme Court's ruling had extended employees' civil rights protections to gender identity and sexual orientation.",
+        "importance": 650
+      },
+      {
+        "date": "2019-XX-XX",
+        "name": "Surge in Opioid Overdose Deaths",
+        "description": "U.S. opioid overdose deaths surged to a record 50,052 deaths in 2019, despite a slight decline in 2018.",
+        "importance": 750
+      },
+      {
+        "date": "2019-11-XX",
+        "name": "Abandonment of Gun Violence Legislation",
+        "description": "After several mass shootings during his term, Trump said he would propose legislation to curtail gun violence, but he abandoned that effort in November 2019.",
+        "importance": 700
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Support for Capital Punishment",
+        "description": "Trump is a long-time advocate of capital punishment. Under his administration, the federal government executed 13 prisoners, more than in the previous 56 years combined and after a 17-year moratorium.",
+        "importance": 800
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Support for Interrogation Torture Methods",
+        "description": "In 2016, Trump said he supported the use of interrogation torture methods such as waterboarding but later appeared to recant this due to the opposition of Defense Secretary James Mattis.",
+        "importance": 700
+      },
+      {
+        "date": "2017-2019",
+        "name": "Clemency granted to Kristian Saucier, Dinesh D'Souza, Alice Marie Johnson, and others",
+        "description": "From 2017 to 2019, Donald Trump pardoned or commuted the sentences of several individuals, including former Navy sailor Kristian Saucier and right-wing commentator Dinesh D'Souza. He also commuted the life sentence of Alice Marie Johnson, following a request by celebrity Kim Kardashian. Additionally, Trump pardoned or reversed the sentences of three American servicemen convicted or accused of committing war crimes in Afghanistan or Iraq.",
+        "importance": 800
+      },
+      {
+        "date": "2020-11-XX",
+        "name": "Pardons in November and December 2020",
+        "description": "In November and December 2020, Donald Trump pardoned several individuals, including Blackwater private security contractors convicted of killing Iraqi civilians, white-collar criminals Michael Milken and Bernard Kerik, daughter Ivanka's father-in-law Charles Kushner, and five people convicted as a result of investigations into Russian interference in the 2016 presidential elections.",
+        "importance": 850
+      },
+      {
+        "date": "2020-12-XX",
+        "name": "Pardons on Trump's last full day in office",
+        "description": "On his last full day in office, Donald Trump granted 73 pardons, including to Steve Bannon and Trump fundraiser Elliott Broidy, and commuted 70 sentences.",
+        "importance": 900
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Family separation at border",
+        "description": "The Trump administration separated more than 5,400 children of migrant families from their parents at the U.S.\u2013Mexico border, sparking public outrage and legal challenges. Trump later signed an executive order to halt the separations, but issues with family communication and reunification persisted.",
+        "importance": 930
+      },
+      {
+        "date": "2018-12-XX",
+        "name": "Trump wall and government shutdown",
+        "description": "In 2018, Trump initiated a 35-day government shutdown over funding for the border wall, resulting in public backlash and economic impact. He later declared a national emergency to divert funds for the wall, facing legal challenges.",
+        "importance": 880
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Trade policies and international relations",
+        "description": "Donald Trump's foreign policy was marked by unpredictability, strained relationships with European allies, and trade wars with countries like China. He also withdrew from the Trans-Pacific Partnership negotiations and imposed tariffs on various imports.",
+        "importance": 870
+      },
+      {
+        "date": "2014-XX-XX",
+        "name": "U.S. imposing penalties on Russian entities",
+        "description": "The U.S. imposed penalties on Russian entities after the 2014 annexation of Crimea, which were later watered down by the Trump administration. This action drew significant attention and controversy.",
+        "importance": 800
+      },
+      {
+        "date": "2019-XX-XX",
+        "name": "U.S. withdrawal from Intermediate-Range Nuclear Forces Treaty",
+        "description": "The U.S. withdrew from the Intermediate-Range Nuclear Forces Treaty, citing alleged Russian non-compliance. This decision had significant implications for global nuclear disarmament efforts.",
+        "importance": 950
+      },
+      {
+        "date": "2018-07-XX",
+        "name": "Helsinki Summit meeting with Putin",
+        "description": "Trump met Putin at the Helsinki Summit in July 2018, drawing bipartisan criticism for accepting Putin's denial of Russian interference in the 2016 presidential election. This drew significant attention and controversy.",
+        "importance": 900
+      },
+      {
+        "date": "2020-03-XX",
+        "name": "Trump's criticism of China's COVID-19 response",
+        "description": "Trump began a campaign of criticism against China over its response to the COVID-19 pandemic starting in March 2020. This had significant implications for U.S.-China relations and global public health efforts.",
+        "importance": 850
+      },
+      {
+        "date": "2020-07-XX",
+        "name": "Sanctions and visa restrictions against Chinese officials",
+        "description": "In July 2020, the Trump administration imposed sanctions and visa restrictions against senior Chinese officials in response to expanded mass detention camps holding Uyghur Muslim ethnic minority. This action drew significant attention and controversy.",
+        "importance": 900
+      },
+      {
+        "date": "2020-07-XX",
+        "name": "Effects on the 2020 presidential campaign",
+        "description": "By July 2020, Trump's handling of the COVID-19 pandemic had become a major issue for the 2020 presidential election. Polls suggested voters blamed Trump for his pandemic response and disbelieved his rhetoric concerning the virus.",
+        "importance": 750
+      },
+      {
+        "date": "2017-01-XX",
+        "name": "Russian election interference",
+        "description": "In January 2017, American intelligence agencies stated with high confidence that the Russian government interfered in the 2016 presidential election to favor the election of Trump. Many suspicious links between Trump associates and Russian officials were discovered.",
+        "importance": 900
+      },
+      {
+        "date": "2016-07-XX",
+        "name": "FBI launches Crossfire Hurricane investigation",
+        "description": "In July 2016, the FBI initiated an investigation called Crossfire Hurricane to explore potential connections between Russia and the Trump campaign. The investigation was a significant development in the inquiry into Russian interference in the 2016 election.",
+        "importance": 950
+      },
+      {
+        "date": "2017-05-XX",
+        "name": "James Comey fired by Trump",
+        "description": "In May 2017, President Trump dismissed FBI director James Comey, leading to significant controversy and raising concerns about potential obstruction of justice. The firing ultimately led to the opening of a counterintelligence investigation into Trump's dealings with Russia.",
+        "importance": 920
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "FBI opens counterintelligence investigation into Trump's Russia ties",
+        "description": "Following the dismissal of James Comey, the FBI initiated a counterintelligence investigation into President Trump's personal and business connections with Russia. This investigation added to the ongoing scrutiny of potential collusion between the Trump campaign and Russia.",
+        "importance": 940
+      },
+      {
+        "date": "XX-XX-XX",
+        "name": "Mueller investigation takes over Crossfire Hurricane",
+        "description": "After its initiation, Crossfire Hurricane was transferred to the Mueller investigation, which continued to examine the possible links between Russia and the Trump campaign. This transition marked a significant phase in the investigation into Russian interference in the 2016 election.",
+        "importance": 930
+      },
+      {
+        "date": "XX-XX-XX",
+        "name": "Rod Rosenstein ends investigation into Trump's direct ties to Russia",
+        "description": "Deputy Attorney General Rod Rosenstein terminated the investigation into President Trump's direct connections to Russia, misleading the FBI about Mueller's intentions to pursue the matter. This decision had a notable impact on the trajectory of the investigation.",
+        "importance": 910
+      },
+      {
+        "date": "2017-05-XX",
+        "name": "Appointment of Robert Mueller as Special Counsel",
+        "description": "In May 2017, Deputy Attorney General Rod Rosenstein appointed Robert Mueller as special counsel for the Department of Justice, ordering him to examine any links and coordination between the Russian government and the Trump campaign. The investigation also looked into potential obstruction of justice and the Trump campaign's ties to several countries.",
+        "importance": 900
+      },
+      {
+        "date": "2019-03-XX",
+        "name": "Conclusion of Mueller Investigation",
+        "description": "In March 2019, Robert Mueller concluded his investigation and gave his report to Attorney General William Barr. The report found evidence of Russian interference in the 2016 election and detailed potential acts of obstruction of justice by Trump.",
+        "importance": 950
+      },
+      {
+        "date": "2019-04-XX",
+        "name": "Release of Redacted Mueller Report",
+        "description": "In April 2019, a redacted version of the Mueller report was publicly released. It found evidence of Russian interference in the 2016 election to favor Trump's candidacy and hinder Clinton's, but did not establish that Trump campaign members conspired with Russian interference.",
+        "importance": 850
+      },
+      {
+        "date": "2019-08-XX",
+        "name": "Whistleblower Complaint and Impeachment Inquiry",
+        "description": "In August 2019, a whistleblower filed a complaint about Trump's phone call with the President of Ukraine, leading to a formal impeachment inquiry initiated by House Speaker Nancy Pelosi. The inquiry focused on Trump's alleged pressure on Ukraine to investigate political opponents.",
+        "importance": 920
+      },
+      {
+        "date": "2019-12-XX",
+        "name": "Impeachment of President Trump",
+        "description": "On December 18, 2019, the House of Representatives impeached Trump on charges of abuse of power and obstruction of Congress, following the impeachment inquiry related to the Ukraine scandal.",
+        "importance": 1000
+      },
+      {
+        "date": "2020-01-XX",
+        "name": "Impeachment Trial in the Senate",
+        "description": "During the impeachment trial in January 2020, the House impeachment managers presented their case for abuse of power and obstruction of Congress, asserting that Trump's actions warranted impeachment.",
+        "importance": 930
+      },
+      {
+        "date": "2020-08-xx",
+        "name": "Official nomination of Donald Trump as the Republican nominee for the 2020 presidential election",
+        "description": "In August 2020, Donald Trump officially became the Republican nominee for the 2020 presidential election. This marked a significant milestone in his bid for re-election.",
+        "importance": 900
+      },
+      {
+        "date": "2018-XX-XX",
+        "name": "Class action lawsuit for fraud",
+        "description": "In 2018, four investors filed a federal class action lawsuit against Trump, the Trump Organization, and his three eldest children for not disclosing their payments from ACN, Inc. The case is scheduled to go to trial on January 29, 2024.",
+        "importance": 800
+      },
+      {
+        "date": "2022-09-XX",
+        "name": "New York State's civil fraud case",
+        "description": "In September 2022, the New York State Attorney General filed a civil fraud case against Trump, his three oldest children, and the Trump Organization. The case involved multiple legal proceedings and rulings, ultimately leading to the cancellation of their business certificates and dissolution of their business entities in September 2023.",
+        "importance": 950
+      },
+      {
+        "date": "2023-05-XX",
+        "name": "E. Jean Carroll's lawsuits",
+        "description": "In May 2023, a New York jury found Trump liable for sexual abuse and defamation in a federal lawsuit brought by journalist E. Jean Carroll. Trump appealed the decision to an appeals court. The trial in the defamation case is scheduled to begin on January 15, 2024.",
+        "importance": 930
+      },
+      {
+        "date": "2023-03-XX",
+        "name": "Diverting Campaign Donations to Trump's Leadership PAC",
+        "description": "In March 2023, Trump's campaign began diverting 10 percent of the donations to his leadership PAC, which had paid $16 million for his legal bills by June 2023.",
+        "importance": 700
+      },
+      {
+        "date": "2021-XX-XX",
+        "name": "C-SPAN Presidential Historians Survey 2021",
+        "description": "C-SPAN's Presidential Historians Survey 2021 ranked Trump fourth-lowest overall, with low ratings in moral authority and administrative skills. This survey provided insights into Trump's standing among presidential historians.",
+        "importance": 600
+      },
+      {
+        "date": "2022-XX-XX",
+        "name": "Siena College Research Institute (SCRI) Survey 2022",
+        "description": "In their 2022 survey, SCRI ranked Trump 43rd out of 45 presidents, highlighting his low rankings in various categories. This survey shed light on Trump's standing among presidential scholars.",
+        "importance": 600
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "Gallup Poll Approval Ratings",
+        "description": "Trump's approval ratings in Gallup polls showed a record-high partisan gap, with high approval among Republicans and low approval among Democrats. His term ended with historically low average approval ratings.",
+        "importance": 800
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Gallup Most Admired Man Poll",
+        "description": "In Gallup's annual poll, Trump was named most admired man in 2020. This marked a significant recognition in the public eye during his presidency.",
+        "importance": 750
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Gallup Poll on U.S. Leadership Approval Ratings",
+        "description": "A Gallup poll in 134 countries comparing the approval ratings of U.S. leadership between 2016 and 2017 found that Trump led Obama in job approval in only 29 countries, highlighting his international standing.",
+        "importance": 700
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Trump's Use of False and Misleading Statements",
+        "description": "Trump frequently made false statements in public speeches and remarks, documented by fact-checkers. His falsehoods became a distinctive part of his political identity.",
+        "importance": 850
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "Promotion of Conspiracy Theories",
+        "description": "Before and throughout his presidency, Trump promoted numerous conspiracy theories, impacting public discourse and perception of various events.",
+        "importance": 750
+      },
+      {
+        "date": "2021-XX-XX",
+        "name": "Incitement of Violence",
+        "description": "Research suggests Trump's rhetoric caused an increased incidence of hate crimes, influencing the social and political climate during his presidency.",
+        "importance": 800
+      },
+      {
+        "date": "2009-XX-XX",
+        "name": "Trump's Social Media Presence",
+        "description": "Trump's social media presence, particularly on Twitter, attracted worldwide attention and became a significant aspect of his communication strategy.",
+        "importance": 700
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "Trump's Relationship with the Press",
+        "description": "Trump sought media attention throughout his career and had a complex relationship with the press, often accusing it of bias while also utilizing it for his benefit.",
+        "importance": 750
+      },
+      {
+        "date": "1975-XX-XX",
+        "name": "Housing Discrimination Lawsuit Settlement",
+        "description": "In 1975, Trump settled a Department of Justice lawsuit that alleged housing discrimination against black renters, reflecting his early involvement in racially charged issues.",
+        "importance": 600
+      },
+      {
+        "date": "2011-XX-XX",
+        "name": "Promotion of Birther Conspiracy Theory",
+        "description": "In 2011, Trump became the leading proponent of the racist 'birther' conspiracy theory, alleging that Barack Obama, the first black U.S. president, was not born in the United States.",
+        "importance": 650
+      },
+      {
+        "date": "2018-01-xx",
+        "name": "Oval Office meeting on immigration legislation",
+        "description": "In a January 2018 Oval Office meeting, Trump reportedly referred to El Salvador, Haiti, Honduras, and African nations as 'shithole countries', which was condemned as racist.",
+        "importance": 920
+      },
+      {
+        "date": "2019-07-xx",
+        "name": "Tweet about Democratic congresswomen",
+        "description": "In July 2019, Trump tweeted that four Democratic congresswomen should 'go back' to the countries they 'came from', leading to a House of Representatives vote to condemn his 'racist comments'.",
+        "importance": 930
+      },
+      {
+        "date": "2016-10-xx",
+        "name": "Misogyny and allegations of sexual misconduct",
+        "description": "Trump has a history of insulting and belittling women, and has been publicly accused of rape, kissing, and groping without consent. He also made lewd comments, which were brought to light in a 2005 'hot mic' recording.",
+        "importance": 970
+      },
+      {
+        "date": "1980-xx",
+        "name": "Pop culture references",
+        "description": "Trump has been the subject of parody, comedy, and caricature in popular culture, and has been named in hundreds of hip hop songs since the 1980s, with references turning largely negative after he began running for office.",
+        "importance": 800
+      },
+      {
+        "date": "XX-XX-XX",
+        "name": "Archive of Donald Trump's tweets",
+        "description": "The archive contains a collection of tweets made by Donald Trump during his time in office, which are often referenced for political analysis and historical record.",
+        "importance": 800
+      },
+      {
+        "date": "XX-XX-XX",
+        "name": "Appearances on C-SPAN",
+        "description": "C-SPAN is a public service that provides coverage of federal government proceedings and public affairs events. Donald Trump has made several appearances on C-SPAN during his presidency, including speeches, press conferences, and interviews.",
+        "importance": 750
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Donald Trump at IMDb",
+        "description": "Donald Trump at IMDb is a page dedicated to the filmography and career of Donald Trump.",
+        "importance": 200
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Donald Trump on the Internet Archive",
+        "description": "Donald Trump on the Internet Archive refers to the collection of digital materials related to Donald Trump's public appearances and speeches.",
+        "importance": 250
+      }
+    ]
+  },
+  {
+    "title": "Vladimir Putin",
+    "events": [
+      {
+        "date": "2014-02-xx",
+        "name": "Annexation of Crimea",
+        "description": "Russia made several military incursions into Ukrainian territory and annexed Crimea and Sevastopol after a controversial referendum.",
+        "importance": 1000
+      },
+      {
+        "date": "2017-01-xx",
+        "name": "Russia's interference in the 2016 US election",
+        "description": "A U.S. intelligence community assessment expressed high confidence that Putin personally ordered an influence campaign to denigrate Hillary Clinton and to harm her electoral chances, later developing 'a clear preference' for Donald Trump.",
+        "importance": 1000
+      },
+      {
+        "date": "2019-09-XX",
+        "name": "Interference with Russia's Nationwide Regional Elections",
+        "description": "In September 2019, Putin's administration interfered with the results of Russia's nationwide regional elections, eliminating all candidates in the opposition to contribute to the ruling party's victory, inciting mass protests for democracy, and leading to large-scale arrests and cases of police brutality.",
+        "importance": 950
+      },
+      {
+        "date": "2021-01-XX",
+        "name": "Meeting with Iran President Ebrahim Raisi",
+        "description": "Putin met Iran President Ebrahim Raisi in January 2022 to lay the groundwork for a 20-year deal between the two nations.",
+        "importance": 870
+      },
+      {
+        "date": "2021-07-XX",
+        "name": "Publication of Essay on Russians and Ukrainians",
+        "description": "In July 2021, Putin published an essay denying the existence of Ukraine as an independent nation and stating that Belarusians, Ukrainians, and Russians should be in one All-Russian nation as a part of the Russian world.",
+        "importance": 940
+      },
+      {
+        "date": "2023-05-XX",
+        "name": "Diplomatic Immunity Announcement by South Africa",
+        "description": "In May 2023, South Africa announced that it would grant diplomatic immunity to Vladimir Putin to attend the 15th BRICS Summit in Johannesburg despite the ICC arrest warrant.",
+        "importance": 880
+      },
+      {
+        "date": "2023-07-XX",
+        "name": "Threat of Reciprocal Action by Putin",
+        "description": "In July 2023, Putin threatened to take 'reciprocal action' if Ukraine used US-supplied cluster munitions during a Ukrainian counter-offensive against Russian forces in occupied southeastern Ukraine.",
+        "importance": 890
+      },
+      {
+        "date": "2023-08-XX",
+        "name": "ICC Arrest Warrant Issuance",
+        "description": "On 17 March 2023, the International Criminal Court issued a warrant for Putin's arrest, alleging his criminal responsibility in the illegal deportation and transfer of children from Ukraine to Russia during the Russian invasion of Ukraine.",
+        "importance": 970
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Replacement of Direct Election of Governors in Russia",
+        "description": "In 2004, the direct election of governors by popular vote was replaced with a system whereby they would be nominated by the president and approved or disapproved by regional legislatures. This was seen by Putin as a necessary move to stop separatist tendencies and get rid of those governors who were connected with organized crime.",
+        "importance": 750
+      },
+      {
+        "date": "2006-XX-XX",
+        "name": "Creation of United Aircraft Corporation (UAC)",
+        "description": "In 2006, Putin launched an industry consolidation program to bring the main aircraft-producing companies under a single umbrella organization, the United Aircraft Corporation (UAC).",
+        "importance": 720
+      },
+      {
+        "date": "2014-XX-XX",
+        "name": "Deal to Supply Natural Gas to China",
+        "description": "In 2014, Putin signed a deal to supply China with 38 billion cubic meters of natural gas per year. Power of Siberia, which Putin has called the 'world's biggest construction project', was launched in 2019 and is expected to continue for 30 years at an ultimate cost to China of $400bn.",
+        "importance": 780
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Signing of the Kyoto Protocol by Russia",
+        "description": "In 2004, Putin signed the Kyoto Protocol treaty designed to reduce greenhouse gas emissions.",
+        "importance": 700
+      },
+      {
+        "date": "2013-XX-XX",
+        "name": "Putin's Statement on Russia's Economic Position",
+        "description": "In 2013, Putin said Russia was one of the five biggest economies in terms of gross domestic product but still lagged behind other countries on indicators such as labor productivity.",
+        "importance": 720
+      },
+      {
+        "date": "2007-XX-XX",
+        "name": "Successful Bid for 2014 Winter Olympics in Sochi",
+        "description": "In 2007, Putin led a successful effort on behalf of Sochi for the 2014 Winter Olympics, the first Winter Olympic Games to ever be hosted by Russia.",
+        "importance": 750
+      },
+      {
+        "date": "2003-XX-XX",
+        "name": "Rose Revolution in Georgia",
+        "description": "The Rose Revolution in Georgia in 2003 led to frictions in the relations between Georgia and Russia. The revolution resulted in a change of government and a shift towards closer ties with the West.",
+        "importance": 800
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Orange Revolution in Ukraine",
+        "description": "The Orange Revolution in Ukraine in 2004 strained the relations between Ukraine and Russia. The revolution marked a period of political and social change in Ukraine, leading to a pro-Western government.",
+        "importance": 850
+      },
+      {
+        "date": "2005-XX-XX",
+        "name": "Tulip Revolution in Kyrgyzstan",
+        "description": "The Tulip Revolution in Kyrgyzstan in 2005 resulted in political change and tensions with Russia. The revolution led to the ousting of the president and a shift towards a more pro-Western stance.",
+        "importance": 780
+      },
+      {
+        "date": "2014-03-XX",
+        "name": "Annexation of Crimea",
+        "description": "In March 2014, the Russian Federation annexed Crimea, citing historical and strategic reasons. The annexation led to international condemnation and heightened tensions between Russia and Ukraine, as well as with Western countries.",
+        "importance": 950
+      },
+      {
+        "date": "2008-XX-XX",
+        "name": "South Ossetia War",
+        "description": "In 2008, the conflict in South Ossetia led to a war between Georgia and Russia. The war resulted in the Russian military's intervention in South Ossetia and Abkhazia, further straining relations with Georgia and the West.",
+        "importance": 820
+      },
+      {
+        "date": "2004-XX-XX",
+        "name": "Improved Relations with Uzbekistan",
+        "description": "Under Putin, Russia's relations improved significantly with Uzbekistan, signaling a shift towards closer ties with post-Soviet republics. This demonstrated Putin's efforts to strengthen alliances within the region.",
+        "importance": 760
+      },
+      {
+        "date": "2003-XX-XX",
+        "name": "Deterioration of Relations with UK",
+        "description": "In 2003, relations between Russia and the United Kingdom deteriorated, influenced by political asylum grants and espionage allegations. This strained the diplomatic ties between the two countries.",
+        "importance": 780
+      },
+      {
+        "date": "2006-XX-XX",
+        "name": "Litvinenko Poisoning Crisis",
+        "description": "The poisoning of Alexander Litvinenko in 2006 led to a crisis in relations between Russia and the UK, resulting in diplomatic expulsions and strained bilateral ties. The incident significantly impacted perceptions of Russia in the UK.",
+        "importance": 850
+      },
+      {
+        "date": "2012-08-XX",
+        "name": "Critics listing ownership of villas and palaces",
+        "description": "In August 2012, critics of Putin listed the ownership of 20 villas and palaces, nine of which were built during Putin's 12 years in power. This indicated a significant accumulation of wealth and raised concerns about potential corruption.",
+        "importance": 800
+      },
+      {
+        "date": "1996-XX-XX",
+        "name": "Construction of Putin's Dacha",
+        "description": "After Putin's dacha in Solovyovka burned down in 1996, he built a new one identical to the original. This event marked the rebuilding of his personal residence and the formation of the Ozero cooperative society.",
+        "importance": 750
+      },
+      {
+        "date": "2022-03-XX",
+        "name": "Putin's removal from International Judo Federation",
+        "description": "In March 2022, Putin was removed from all positions in the International Judo Federation (IJF) due to the Russian war in Ukraine. This event signified the impact of the conflict on Putin's international standing in the world of sports.",
+        "importance": 700
+      },
+      {
+        "date": "2000-XX-XX",
+        "name": "Co-authoring a book on Judo",
+        "description": "Putin co-authored a book entitled 'Learn Judo with Vladimir Putin' in Russian in 2000. This demonstrated his passion for martial arts and contributed to his image as a judo practitioner.",
+        "importance": 600
+      },
+      {
+        "date": "2012-XX-XX",
+        "name": "Award of eighth dan of the black belt",
+        "description": "Putin was awarded eighth dan of the black belt in 2012, becoming the first Russian to achieve this status. This recognition highlighted his dedication and skill in martial arts.",
+        "importance": 650
+      },
+      {
+        "date": "2022-04-XX",
+        "name": "Speculation about Putin's health",
+        "description": "In April 2022, there were reports and speculation about Putin possibly having Parkinson's disease, which was refuted by the Kremlin and outside medical professionals. This event raised questions about Putin's health and its potential impact on his leadership.",
+        "importance": 700
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Putin: His Downfall and Russia's Coming Crash",
+        "description": "This book, published in 2017, explores the potential downfall of Vladimir Putin and the potential economic crash of Russia. It provides insights into the political and economic landscape of Russia under Putin's rule.",
+        "importance": 750
+      },
+      {
+        "date": "2015-XX-XX",
+        "name": "The Putin Mystique: Inside Russia's Power Cult",
+        "description": "This book delves into the mystique surrounding Vladimir Putin and the power cult within Russia. It offers an in-depth look at the dynamics of power and influence under Putin's leadership.",
+        "importance": 700
+      },
+      {
+        "date": "2010-XX-XX",
+        "name": "A Little War that Shook the World: Georgia, Russia, and the Future of the West",
+        "description": "This book examines the impact of the conflict between Georgia and Russia on the future of the West. It sheds light on the geopolitical implications of the war and its significance in global politics.",
+        "importance": 680
+      },
+      {
+        "date": "2012-XX-XX",
+        "name": "The Man Without a Face: The Unlikely Rise of Vladimir Putin",
+        "description": "This book, published in 2012, provides a compelling account of the unlikely rise of Vladimir Putin. It offers insights into Putin's ascent to power and the factors that shaped his leadership.",
+        "importance": 720
+      },
+      {
+        "date": "2015-XX-XX",
+        "name": "Fragile Empire: How Russia Fell in and Out of Love with Vladimir Putin",
+        "description": "This book delves into the complex dynamics of Russia's relationship with Vladimir Putin, exploring how the country fell in and out of love with his leadership. It provides a nuanced perspective on Putin's influence.",
+        "importance": 720
+      },
+      {
+        "date": "2016-XX-XX",
+        "name": "How Putin Silences Dissent: Inside the Kremlin's Crackdown",
+        "description": "This article, published in 2016, sheds light on the methods employed by Vladimir Putin to silence dissent within Russia. It offers insights into the mechanisms of censorship and control within the Kremlin.",
+        "importance": 760
+      },
+      {
+        "date": "2015-XX-XX",
+        "name": "The New Tsar: The Rise and Reign of Vladimir Putin",
+        "description": "This book provides a comprehensive account of Vladimir Putin's rise to power and his reign as the leader of Russia. It offers a detailed examination of Putin's political trajectory and governance.",
+        "importance": 740
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "The Shadow in the East: Vladimir Putin and the New Baltic Front",
+        "description": "This book, published in 2020, explores Vladimir Putin's engagement with the Baltic region and the emergence of a new front in the geopolitical landscape. It provides insights into the evolving dynamics in the Baltic area.",
+        "importance": 720
+      },
+      {
+        "date": "2008-XX-XX",
+        "name": "Putin: Russia's choice",
+        "description": "This book offers a comprehensive analysis of the political landscape in Russia and the choice represented by Vladimir Putin's leadership. It provides insights into the factors that shaped Russia's trajectory under Putin's rule.",
+        "importance": 700
+      },
+      {
+        "date": "2020-XX-XX",
+        "name": "The Putin Paradox",
+        "description": "The Putin Paradox is a book written by Richard Sakwa, which discusses the complexities and contradictions in Vladimir Putin's leadership and the political landscape of Russia.",
+        "importance": 750
+      },
+      {
+        "date": "2014-XX-XX",
+        "name": "Putin Redux: Power and Contradiction in Contemporary Russia",
+        "description": "Putin Redux is a book by Richard Sakwa that explores the power dynamics and contradictions within contemporary Russia under Vladimir Putin's leadership.",
+        "importance": 800
+      },
+      {
+        "date": "2015-XX-XX",
+        "name": "Sex, Politics, & Putin: Political Legitimacy in Russia",
+        "description": "Sex, Politics, & Putin by Valerie Sperling delves into the political legitimacy and the role of sex in the context of Vladimir Putin's governance in Russia.",
+        "importance": 700
+      },
+      {
+        "date": "2021-XX-XX",
+        "name": "Russia Resurrected: Its Power and Purpose in a New Global Order",
+        "description": "Russia Resurrected, authored by Kathryn E. Stoner, examines the power and purpose of Russia in the evolving global order, shedding light on its geopolitical significance.",
+        "importance": 780
+      },
+      {
+        "date": "2017-XX-XX",
+        "name": "Near Abroad: Putin, the West, and the Contest Over Ukraine and the Caucasus",
+        "description": "Near Abroad by Gerard Toal focuses on Putin's involvement in the contest over Ukraine and the Caucasus, exploring the geopolitical tensions between Russia and the West in the region.",
+        "importance": 820
+      },
+      {
+        "date": "2000-XX-XX",
+        "name": "Vladimir Putin becomes President of Russia",
+        "description": "Vladimir Putin became the President of Russia in 2000, marking the start of his influential role in Russian politics. His leadership has been characterized by various themes including greyness, greed, and grievance, as noted by writers.",
+        "importance": 950
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Vladimir Putin's involvement with Curlie",
+        "description": "Vladimir Putin has a known interest in technology and the internet, but there is no specific mention of his involvement with Curlie in public records.",
+        "importance": 200
+      },
+      {
+        "date": "XXXX-XX-XX",
+        "name": "Vladimir Putin's Appearance on C-SPAN",
+        "description": "Vladimir Putin made an appearance on C-SPAN, discussing various international and domestic issues.",
+        "importance": 800
+      }
+    ]
+  }
+]

@@ -24,7 +24,7 @@ def layer0_processor():
     count_tokens = 0
     for index, text in enumerate(raw_datum["texts"]):
         count_tokens += num_tokens_from_string(text, "cl100k_base")
-        if count_tokens <= 1300:
+        if count_tokens <= 2500:
             target_text = new_raw_datum["texts"].pop(0)
             text_packet["text"] += target_text
             used_raw_datum_texts.append(target_text)

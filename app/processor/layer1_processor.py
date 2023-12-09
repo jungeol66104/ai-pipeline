@@ -41,6 +41,7 @@ def layer1_processor(events_packet):
         association = {"id": association_next_id, "timeline_id": timeline_next_id, "event_id": event_next_id, "importance": event.pop("importance")}
         associations_for_db.append(association)
         event_next_id += 1
+        association_next_id += 1
 
     if not timeline_from_db:
         insert_timeline(timelines_for_db)
@@ -62,11 +63,17 @@ def layer1_processor(events_packet):
 
     events_for_storage = events_invalid
     with open(events_packet_storage_json_path, 'r', encoding='utf-8') as file:
-        original_events_packet = json.load(file)
-    new_events_packet = original_events_packet[:]
-    new_events_packet.append({"title": events_packet["title"], "events": events_for_storage})
+        original_events_packets = json.load(file)
+
+    new_events_packets = original_events_packets[:]
+    events_packet_with_same_title = next((new_events_packet for new_events_packet in new_events_packets if new_events_packet["title"] == events_packet["title"]), None)
+    if events_packet_with_same_title:
+        events_packet_with_same_title["events"].extend(events_for_storage)
+    else:
+        new_events_packets.append({"title": events_packet["title"], "events": events_for_storage})
+
     with open(events_packet_storage_json_path, 'w', encoding='utf-8') as file:
-        json.dump(new_events_packet, file, indent=2)
+        json.dump(new_events_packets, file, indent=2)
 
     # (later)
     events_for_crawler = events_invalid
