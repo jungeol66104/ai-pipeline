@@ -1,12 +1,17 @@
+import os
 import json
 from openai import OpenAI
 # refactoring: clear
+
+dir_ai = os.path.dirname(os.path.realpath(__file__))
+dir_pipeline = os.path.join(dir_ai, '../../')
+finetune_translator_kr_storage_path = os.path.join(dir_pipeline, 'storage', 'finetune_translator_kr_storage.json')
 
 
 def translator_kr(events_for_translator):
     client = OpenAI()
 
-    prompt = "You are the best translator who converts some part of user input into Korean.\n\nFollow the conditions below and only return JSON format.\n\nCondition-1. Only translate values of \"ko_name\" and \"ko_description\".\n\nCondition-2. For \"ko_name\", translated Korean must be a nominalized format.\n\nCondition-3. For \"ko_description\", translated Korean must be '이다'체, not '입니다'체.\n\nCondition-4. Make user input list to JSON just like the format below.\n\nDesired JSON Format:\n{\"1\": first dictionary of the user input list that is translated., ..., \"N\": Nth dictionary of the user input list that is translated.} "
+    prompt = "You are the best translator who converts some part of user input into Korean.\n\nFollow the conditions below and only return JSON format.\n\nCondition-1. Only translate values of \"ko_name\" and \"ko_description\".\n\nCondition-2. For \"ko_name\", translated Korean must be a nominalized format.\n\nCondition-3. For \"ko_description\", translated Korean must be '이다'체, not '입니다'체.\n\nCondition-4. Make user input list to JSON just like the format below.\n\nDesired JSON Format:\n{\"1\": first dictionary of the user input list that is translated., ..., \"N\": Nth dictionary of the user input list that is translated.}"
 
     response = client.chat.completions.create(
         model="gpt-3.5-turbo-1106",
@@ -21,8 +26,16 @@ def translator_kr(events_for_translator):
         frequency_penalty=0,
         presence_penalty=0
     )
-
     content = json.loads(response.choices[0].message.content)
+
+    # save to fine-tuning storage
+    new_finetune_datum = {"input": events_for_translator, "output": content}
+    with open(finetune_translator_kr_storage_path, 'r', encoding='utf-8') as file:
+        finetune_data = json.load(file)
+    finetune_data.append(new_finetune_datum)
+    with open(finetune_translator_kr_storage_path, 'w', encoding='utf-8') as file:
+        json.dump(finetune_data, file, indent="2")
+
     events_kr = list(content.values())
     if len(events_for_translator) == len(events_kr):
         for index, event in enumerate(events_kr):

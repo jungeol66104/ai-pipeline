@@ -1,6 +1,11 @@
+import os
 import json
 from openai import OpenAI
 # refactoring: clear
+
+dir_ai = os.path.dirname(os.path.realpath(__file__))
+dir_pipeline = os.path.join(dir_ai, '../../')
+finetune_simaqian_storage_path = os.path.join(dir_pipeline, 'storage', 'finetune_simaqian_storage.json')
 
 
 # get json events from raw data
@@ -23,9 +28,17 @@ def simaqian(text_packet):
         frequency_penalty=0,
         presence_penalty=0
     )
+    content = json.loads(response.choices[0].message.content)
+
+    # save to fine-tuning storage
+    new_finetune_datum = {"input": text_packet, "output": content}
+    with open(finetune_simaqian_storage_path, 'r', encoding='utf-8') as file:
+        finetune_data = json.load(file)
+    finetune_data.append(new_finetune_datum)
+    with open(finetune_simaqian_storage_path, 'w', encoding='utf-8') as file:
+        json.dump(finetune_data, file, indent="2")
 
     # there were no errors in JSON format of AI generated output until now
-    content = json.loads(response.choices[0].message.content)
     events = list(content.values())
     events_packet = {"title": title, "events": events}
 
