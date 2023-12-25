@@ -1,49 +1,20 @@
-import json
-import os
-import tiktoken
-# refactoring: clear
-
-dir_processor = os.path.dirname(os.path.realpath(__file__))
-dir_pipeline = os.path.join(dir_processor, '../../')
-raw_data_storage_json_path = os.path.join(dir_pipeline, 'storage', 'raw_data_storage.json')
-temp_storage_json_path = os.path.join(dir_pipeline, 'storage', 'temp_storage.json')
+from app.utils import read_storage_file, write_storage_file, modify_storage_file
 
 
 def layer0_processor():
-    with open(raw_data_storage_json_path, 'r', encoding='utf-8') as file:
-        raw_data = json.load(file)
+    crawling_model = None
+    crawling_target = None
+    if read_storage_file('raw_data.json').lenghth != 0:
+        crawling_model = "skip"
+    elif read_storage_file('queue.json').length != 0:
+        crawling_model = "wikipedia"
+        crawling_target = read_storage_file('queue.json').pop(0)
+    elif read_storage_file('invalid_events.json').length != 0:
+        crawling_model = "serp"
+        events_packets = read_storage_file('invalid_events.json')
+        crawling_target = {"subject": events_packets[0]["subject"], "event": events_packets[0]["events"].pop(0)}
+        write_storage_file(events_packets, 'invalid_events.json')
 
-    raw_datum = raw_data[0]
-    # raw_data for iteration, new_raw_data for mutation
-    new_raw_data = raw_data[:]
-    new_raw_datum = new_raw_data[0]
-    used_raw_datum_texts = []
-    text_packet = {"title": raw_datum["title"], "text": ""}
+    modify_storage_file('status', "in-progress", 'status.json')
 
-    # limit number of tokens to 2500
-    count_tokens = 0
-    for index, text in enumerate(raw_datum["texts"]):
-        count_tokens += num_tokens_from_string(text, "cl100k_base")
-        if count_tokens <= 2500:
-            target_text = new_raw_datum["texts"].pop(0)
-            text_packet["text"] += target_text
-            used_raw_datum_texts.append(target_text)
-        else:
-            break
-
-    end = True if len(new_raw_datum["texts"]) == 0 else False
-
-    # commit changes to storages
-    with open(raw_data_storage_json_path, 'w', encoding='utf-8') as file:
-        json.dump(new_raw_data, file, indent=2)
-    with open(temp_storage_json_path, 'w', encoding='utf-8') as file:
-        json.dump(used_raw_datum_texts, file, indent=2)
-
-    print('\tlayer0_processor complete')
-    return [end, text_packet]
-
-
-def num_tokens_from_string(string, encoding_name):
-    encoding = tiktoken.get_encoding(encoding_name)
-    num_tokens = len(encoding.encode(string))
-    return num_tokens
+    return crawling_model, crawling_target

@@ -6,7 +6,7 @@ import wikipediaapi
 
 dir_crawler = os.path.dirname(os.path.realpath(__file__))
 dir_pipeline = os.path.join(dir_crawler, '../../')
-raw_data_storage_json_path = os.path.join(dir_pipeline, 'storage', 'raw_data_storage.json')
+raw_data_storage_json_path = os.path.join(dir_pipeline, 'storage', 'raw_data.json')
 
 
 def wikipedia_crawler(title):
