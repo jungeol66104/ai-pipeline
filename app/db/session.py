@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
-from app.db.models import Test, Timeline, Event, EventTimelineAssociation
+from app.db.models import Timeline, Event, EventTimeline
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -35,7 +35,7 @@ def insert_event(events):
 
 def insert_association(associations):
     try:
-        db.bulk_insert_mappings(EventTimelineAssociation, associations)
+        db.bulk_insert_mappings(EventTimeline, associations)
         db.commit()
     except Exception as e:
         db.rollback()
@@ -56,4 +56,4 @@ def query_event_highest_id():
 
 
 def query_association_highest_id():
-    return db.query(func.max(EventTimelineAssociation.id)).scalar()
+    return db.query(func.max(EventTimeline.id)).scalar()

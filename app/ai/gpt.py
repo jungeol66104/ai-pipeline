@@ -1,5 +1,6 @@
 import json
 from openai import OpenAI
+# refactoring: clear
 
 
 def gpt(model, prompt, input_data, temperature, max_tokens):

@@ -6,11 +6,11 @@ from app.processor.layer0_processor import layer0_processor
 from app.processor.layer1_processor import layer1_processor
 from app.processor.layer2_processor import layer2_processor
 from app.processor.layer3_processor import layer3_processor
-# refactoring:
+# refactoring: clear
 
 
 def run_pipeline():
-    while read_storage_file('status.json')["source"] == "exist":
+    while read_storage_file('status.json')["run"]:
         print('\nCYCLE START')
         # phase 1: crawler
         crawling_model, crawling_target = layer0_processor()

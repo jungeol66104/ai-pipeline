@@ -1,6 +1,6 @@
 {
   "status": "completed",
-  "source": "exist",
+  "run": true,
   "steps": {},
   "db": {}
 }
