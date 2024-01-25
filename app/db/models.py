@@ -1,8 +1,19 @@
-from sqlalchemy import Column, Integer, String, Text, Float, ForeignKey
+from sqlalchemy import Column, Integer, String, Text, Float, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
+
+
+class Timeline(Base):
+    __tablename__ = 'timeline'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200))
+    description = Column(Text)
+    image_url = Column(String(30))
+    created_dt = Column(DateTime)
+    updated_dt = Column(DateTime)
 
 
 class Event(Base):
@@ -13,13 +24,9 @@ class Event(Base):
     description = Column(Text)
     date = Column(String(100))
     ephemeris_time = Column(Float)
-
-
-class Timeline(Base):
-    __tablename__ = 'timeline'
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    name = Column(String(200))
+    is_enabled = Column(Integer)
+    created_dt = Column(DateTime)
+    updated_dt = Column(DateTime)
 
 
 class EventTimeline(Base):
@@ -33,11 +40,41 @@ class EventTimeline(Base):
     timeline = relationship('Timeline')
 
 
+class Series(Base):
+    __tablename__ = 'series'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200), nullable=False)
+    description = Column(Text)
+
+
+class TimelineSeries(Base):
+    __tablename__ = 'timeline_series'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timeline_id = Column(Integer, ForeignKey('timeline.id', ondelete='CASCADE'))
+    series_id = Column(Integer, ForeignKey('series.id', ondelete='CASCADE'))
+    timeline = relationship('Timeline')
+    series = relationship('Series')
+
+
 class LanguageCode(Base):
     __tablename__ = 'language_code'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     language_code = Column(String(10))
+
+
+class TimelineTranslation(Base):
+    __tablename__ = 'timeline_translation'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    timeline_id = Column(Integer, ForeignKey('timeline.id', ondelete='CASCADE'))
+    language_code_id = Column(Integer, ForeignKey('language_code.id', ondelete='CASCADE'))
+    name = Column(String(200), nullable=False)
+    description = Column(Text)
+    timeline = relationship('Timeline')
+    language_code = relationship('LanguageCode')
 
 
 class EventTranslation(Base):
@@ -52,14 +89,15 @@ class EventTranslation(Base):
     language_code = relationship('LanguageCode')
 
 
-class TimelineTranslation(Base):
-    __tablename__ = 'timeline_translation'
+class SeriesTranslation(Base):
+    __tablename__ = 'series_translation'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    timeline_id = Column(Integer, ForeignKey('timeline.id', ondelete='CASCADE'))
+    series_id = Column(Integer, ForeignKey('series.id', ondelete='CASCADE'))
     language_code_id = Column(Integer, ForeignKey('language_code.id', ondelete='CASCADE'))
     name = Column(String(200), nullable=False)
-    timeline = relationship('Timeline')
+    description = Column(Text)
+    event = relationship('Series')
     language_code = relationship('LanguageCode')
 
 
@@ -89,3 +127,14 @@ class FineTuningTrainingSet(Base):
     input = Column(Text)
     output = Column(Text)
     pipeline_model = relationship('PipelineModel')
+
+
+class UserTimeline(Base):
+    __tablename__ = 'user_timeline'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(Text)
+    user_email = Column(String(30))
+    is_completed = Column(Integer)
+    created_dt = Column(DateTime)
+    updated_dt = Column(DateTime)
