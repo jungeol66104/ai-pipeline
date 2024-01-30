@@ -1,12 +1,3 @@
 {
-  "run": false,
-  "db": {
-    "timeline": false,
-    "event": false,
-    "event_timeline": false,
-    "timeline_translation": false,
-    "event_translation": false,
-    "invalid_events": false,
-    "fine_tuning_training_set": false
-  }
+  "run": false
 }

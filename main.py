@@ -1,11 +1,9 @@
 from app.utils import read_storage_file
 from app.crawler.crawler import crawler
 from app.ai.simaqian import simaqian
-from app.ai.translator_kr import translator_kr
 from app.processor.layer0_processor import layer0_processor
 from app.processor.layer1_processor import layer1_processor
 from app.processor.layer2_processor import layer2_processor
-from app.processor.layer3_processor import layer3_processor
 from app.db.uploader import uploader
 # refactoring: clear
 
@@ -19,9 +17,7 @@ def run_pipeline():
         # phase 2: ai
         text_packet = layer1_processor()
         events_packet = simaqian(text_packet)
-        timelines_for_translator_kr, events_for_translator_kr = layer2_processor(events_packet)
-        timelines_kr, events_kr = translator_kr(timelines_for_translator_kr, events_for_translator_kr)
-        layer3_processor(timelines_kr, events_kr)
+        layer2_processor(events_packet)
         print('CYCLE END')
     return
 

@@ -117,16 +117,20 @@ class PipelineModel(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(20))
+    created_dt = Column(DateTime)
+    updated_dt = Column(DateTime)
 
 
-class FineTuningTrainingSet(Base):
-    __tablename__ = 'fine_tuning_training_set'
+class TrainingSet(Base):
+    __tablename__ = 'training_set'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     pipeline_model_id = Column(Integer, ForeignKey('pipeline_model.id', ondelete='CASCADE'))
     input = Column(Text)
     output = Column(Text)
     pipeline_model = relationship('PipelineModel')
+    created_dt = Column(DateTime)
+    updated_dt = Column(DateTime)
 
 
 class UserTimeline(Base):

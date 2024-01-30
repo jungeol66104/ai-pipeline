@@ -1,5 +1,5 @@
 from app.db.session import query_highest_event_id, query_highest_timeline_id, query_highest_event_timeline_id, query_timeline_by_name
-from app.utils import get_is_date_valid, get_ephemeris_time, modify_storage_file_list, logger, read_storage_file
+from app.utils import get_is_date_valid, get_ephemeris_time, modify_storage_file_list, logger, read_storage_file, modify_storage_file_value
 # refactoring: clear
 
 
@@ -72,5 +72,10 @@ def layer2_processor(events_packet):
         event["event_id"] = event.pop("id")
         del event["date"]
         del event["ephemeris_time"]
+
+    raw_data = read_storage_file('raw_data.json')
+    queue = read_storage_file('queue.json')
+    if len(raw_data) == 0 and len(queue) == 0:
+        modify_storage_file_value('run', False, 'status.json')
 
     return [timelines_for_translator_kr, events_for_translator_kr]

@@ -1,5 +1,4 @@
-import tiktoken
-from app.utils import read_storage_file, write_storage_file, modify_storage_file_value, logger
+from app.utils import read_storage_file, write_storage_file, modify_storage_file_value, logger, num_tokens_from_string
 # refactoring: needed (consider not using last_index)
 
 
@@ -11,7 +10,7 @@ def layer1_processor():
     used_raw_datum_texts = []
     text_packet = {"subject": raw_datum["subject"], "text": ""}
 
-    token_limit = 200
+    token_limit = 1000
     count_tokens = 0
     last_index = 0
     for index, text in enumerate(raw_datum["texts"]):
@@ -31,7 +30,4 @@ def layer1_processor():
     return text_packet
 
 
-def num_tokens_from_string(string, encoding_name):
-    encoding = tiktoken.get_encoding(encoding_name)
-    num_tokens = len(encoding.encode(string))
-    return num_tokens
+

@@ -3,8 +3,6 @@ import os
 import tiktoken
 import PyPDF2
 from app.utils import read_storage_file, write_storage_file, split_by_newline
-from app.db.uploader import uploader
-
 
 dir_pipeline = os.path.dirname(os.path.realpath(__file__))
 
@@ -55,20 +53,11 @@ def txt_organizer(directory, file, pattern, replace):
     return
 
 def reset_raw_data():
-    raw_data = read_storage_file('raw_data.json')
-    used_raw_datum_texts = read_storage_file('temporary.json')["used_raw_datum_texts"]
-    raw_data[0]["texts"] = used_raw_datum_texts + raw_data[0]["texts"]
-    write_storage_file(raw_data, 'raw_data.json')
+    # raw_data = read_storage_file('raw_data.json')
+    # used_raw_datum_texts = read_storage_file('temporary.json')["used_raw_datum_texts"]
+    # raw_data[0]["texts"] = used_raw_datum_texts + raw_data[0]["texts"]
+    write_storage_file([], 'raw_data.json')
     return
-
-
-def reset_before_translation():
-    temporary = read_storage_file('temporary.json')
-    temporary["db"]["event"] = temporary["db"]["event"][:61]
-    temporary["db"]["event_timeline"] = temporary["db"]["event_timeline"][:61]
-    write_storage_file(temporary, 'temporary.json')
-    return
-
 
 def check_keys_validity():
     temporary_db = read_storage_file('temporary.json')["db"]
@@ -101,11 +90,10 @@ def reset_temporary():
         "crawling_target": "",
         "used_raw_datum_texts": [],
         "db": {
+            "url":[],
             "timeline": [],
             "event": [],
             "event_timeline": [],
-            "timeline_translation": [],
-            "event_translation": [],
             "invalid_events": [],
             "fine_tuning_training_set": []
         }
@@ -199,16 +187,16 @@ def txt_afc_organizer():
 
 def change_property_sequentially():
     temporary = read_storage_file('temporary.json')
-    target_list = temporary["db"]["event_timeline"]
+    target_list = temporary["db"]["timeline"]
 
-    # target_list = target_list[:1]
-    # temporary["db"]["timeline_translation"] = target_list
-
-    for i, l in enumerate(target_list):
-        if l["timeline_id"] != 9:
-            # temporary["db"]["event_timeline"][i]["timeline_id"] = 9
-            print(l["timeline_id"])
-    # write_storage_file(temporary, 'temporary.json')
+    target_list = target_list[:1]
+    temporary["db"]["timeline"] = target_list
+    #
+    # for i, l in enumerate(target_list):
+    #     if l["timeline_id"] != 10:
+    #         temporary["db"]["event_timeline"][i]["timeline_id"] = 10
+    #         print(l["timeline_id"])
+    write_storage_file(temporary, 'temporary.json')
     return
 
 
@@ -227,16 +215,24 @@ def txt_to_raw_data(directory, file, subject):
     write_storage_file(raw_data, 'raw_data.json')
     return
 
+def txt_org():
+    text = read_data_txt("", 'test.txt')
+    text = text.replace('\n', '')
+    text = text.replace('\t', '')
+    text = text.replace(' ', '')
+    write_data_txt("",'test.txt', text)
+    return
+
 # reset_raw_data()
 # reset_temporary()
 # reset_before_translation()
 # check_temporary_db()
 # check_keys_validity()
-# check_text_tokens(read_data_txt('great_depression', 'great_depression_6.txt'))
+# check_text_tokens(read_data_txt('', 'test.txt'))
 # uploader()
 
 # pdf_to_text()
 # txt_afc_organizer()
 # change_property_sequentially()
 # txt_to_raw_data('great_depression', 'great_depression_6.txt', 'Great Depression')
-
+# txt_org()
