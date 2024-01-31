@@ -1,6 +1,7 @@
 import json
 from app.ai.gpt import gpt
-from app.processor.utils import read_storage_file, write_storage_file, modify_storage_file_list, logger, get_text_batches, simaqian_processor
+from app.processor.utils import read_storage_file, write_storage_file, modify_storage_file_list, logger, get_text_batches
+from app.processor.processors import simaqian_processor
 # refactoring: clear
 
 

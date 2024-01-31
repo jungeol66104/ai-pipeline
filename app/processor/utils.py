@@ -1,6 +1,8 @@
-import json
 import os
+import re
+import json
 import tiktoken
+import spiceypy as spice
 from functools import wraps
 from app.utils import num_tokens_from_string
 
@@ -67,11 +69,6 @@ def modify_storage_file_list(key_path, value, file, subdirectory=None):
 
 
 # utils
-def get_text_packet(raw_datum):
-    text_packet = {"subject": raw_datum["subject"], "text": raw_datum[0]}
-    return text_packet
-
-
 def get_text_batches(raw_datum):
     texts, token_limit = raw_datum["texts"], raw_datum["token_limit"]
 
@@ -107,7 +104,42 @@ def get_url_existence(subject):
     return url_existence
 
 
-# processors
-def simaqian_processor(events, timelines):
+def get_is_date_valid(input_string):
+    pattern = re.compile(r'^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$')
+    return bool(pattern.match(input_string))
 
-    return
+
+def get_ephemeris_time(date):
+    file_path = naif0012_tls_path
+    spice.furnsh(file_path)
+    return spice.str2et(convert_date(date))
+
+
+def convert_date(date):
+    parts = []
+    if date.startswith("-"):
+        parts.append(date)
+    else:
+        parts = date.split("-")
+
+    if len(parts) != 3:
+        parts.append(1)
+        parts.append(1)
+
+    year = parts[0]
+    month = parts[1]
+    day = parts[2]
+
+    if year.startswith("-"):
+        year = year[1:]
+        era = "B.C."
+    else:
+        era = "A.D."
+
+    converted_date = f"{year} {era} {month}-{day} 00:00"
+
+    return converted_date
+
+
+# processors
+

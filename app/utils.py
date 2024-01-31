@@ -83,7 +83,6 @@ def get_is_date_valid(input_string):
 def get_ephemeris_time(date):
     file_path = naif0012_tls_path
     spice.furnsh(file_path)
-
     return spice.str2et(convert_date(date))
 
 

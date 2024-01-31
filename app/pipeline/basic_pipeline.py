@@ -1,3 +1,4 @@
+from app.ai.simaqian import simaqian
 from app.ai.url_extractor import url_extractor
 from app.crawler.subject_crawler import subject_crawler
 from app.crawler.url_crawler import url_crawler
@@ -11,5 +12,6 @@ def basic_pipeline(subject):
     url_uploader()
     while get_url_existence(subject):
         url_crawler()
-        break
+        simaqian()
+
     return
