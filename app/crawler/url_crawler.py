@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from app.processor.utils import calculate_token_limit
-from app.utils import read_storage_file, write_storage_file, logger, split_by_newline
+from app.util.utils import get_token_limit, read_storage_file, write_storage_file, logger, split_by_newline
 
 
 @logger
@@ -20,7 +19,7 @@ def url_crawler():
     texts = split_by_newline(text)
 
     raw_data = read_storage_file('raw_data.json')
-    raw_data.append({"subject": target_url["subject"], "token_limit": calculate_token_limit(texts), "texts": texts})
+    raw_data.append({"subject": target_url["subject"], "token_limit": get_token_limit(texts), "texts": texts})
 
     write_storage_file(raw_data, 'raw_data.json')
     target_url["is_completed"] = True

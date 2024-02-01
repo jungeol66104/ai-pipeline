@@ -1,5 +1,5 @@
 import re
-from tools import txt_space_remover, read_data_txt, check_text_tokens, write_data_txt
+from _deprecated.tools import txt_space_remover, read_data_txt, check_text_tokens, write_data_txt
 
 
 # great_depression

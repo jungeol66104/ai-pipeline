@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
-from app.db.models import Timeline, Event, EventTimeline, TimelineTranslation, EventTranslation, InvalidEvents, TrainingSet
+from app.db.models import Timeline, Event, EventTimeline, InvalidEvents, TrainingSet, SerpUrl
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -18,15 +18,8 @@ connection = engine.connect()
 def query_instance_by_id(table, target_id):
     return db.query(table).filter(table.id == target_id).first()
 
+
 query_invalid_event_by_id = lambda target_id: query_instance_by_id(InvalidEvents, target_id)
-
-
-def query_instance_existence_by_subject(table, subject):
-    return
-
-
-def query_instances_by_subject(table, subject):
-    return
 
 
 def query_highest_column_value(column):
@@ -36,10 +29,20 @@ def query_highest_column_value(column):
 query_highest_timeline_id = query_highest_column_value(Timeline.id)
 query_highest_event_id = query_highest_column_value(Event.id)
 query_highest_event_timeline_id = query_highest_column_value(EventTimeline.id)
-query_highest_timeline_translation_id = query_highest_column_value(TimelineTranslation.id)
-query_highest_event_translation_id = query_highest_column_value(EventTranslation.id)
 query_highest_invalid_events_id = query_highest_column_value(InvalidEvents.id)
-query_highest_fine_tuning_training_set_id = query_highest_column_value(TrainingSet.id)
+query_highest_training_set_id = query_highest_column_value(TrainingSet.id)
+
+
+def query_timeline_by_name(target_name):
+    return db.query(Timeline).filter(Timeline.name == target_name).first()
+
+
+def query_serp_urls_by_url(target_url):
+    return db.query(SerpUrl).filter(SerpUrl.url == target_url).all()
+
+
+def query_invalid_events_by_subject(target_subject):
+    return db.query(InvalidEvents).filter(InvalidEvents.subject == target_subject).all()
 
 
 # insert
@@ -55,11 +58,6 @@ def insert_data(table, data):
 insert_timeline = lambda timelines: insert_data(Timeline, timelines)
 insert_event = lambda events: insert_data(Event, events)
 insert_event_timeline = lambda event_timelines: insert_data(EventTimeline, event_timelines)
-insert_timeline_translation = lambda timeline_translations: insert_data(TimelineTranslation, timeline_translations)
-insert_event_translation = lambda event_translations: insert_data(EventTranslation, event_translations)
 insert_invalid_events = lambda invalid_events: insert_data(InvalidEvents, invalid_events)
-insert_fine_tuning_training_set = lambda fine_tuning_training_sets: insert_data(TrainingSet, fine_tuning_training_sets)
-
-
-def query_timeline_by_name(target_name):
-    return db.query(Timeline).filter(Timeline.name == target_name).first()
+insert_training_set = lambda training_sets: insert_data(TrainingSet, training_sets)
+insert_serp_url = lambda serp_urls: insert_data(SerpUrl, serp_urls)

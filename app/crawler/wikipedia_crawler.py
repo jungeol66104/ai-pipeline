@@ -1,5 +1,5 @@
 import wikipediaapi
-from app.utils import read_storage_file, write_storage_file, logger, split_by_newline
+from app.util.utils import read_storage_file, write_storage_file, logger, split_by_newline
 # refactoring: clear
 
 

@@ -2,11 +2,11 @@
   "crawling_target": "",
   "used_raw_datum_texts": [],
   "db": {
-    "url": [],
+    "serp_url": [],
     "timeline": [],
     "event": [],
     "event_timeline": [],
     "invalid_events": [],
-    "fine_tuning_training_set": []
+    "training_set": []
   }
 }

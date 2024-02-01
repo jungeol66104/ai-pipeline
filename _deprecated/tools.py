@@ -2,20 +2,20 @@ import re
 import os
 import tiktoken
 import PyPDF2
-from app.utils import read_storage_file, write_storage_file, split_by_newline
+from app.util.utils import read_storage_file, write_storage_file, split_by_newline
 
 dir_pipeline = os.path.dirname(os.path.realpath(__file__))
 
 
 def read_data_txt(directory, file):
-    file_path = os.path.join(dir_pipeline, 'data', directory, file)
+    file_path = os.path.join(dir_pipeline, '../data', directory, file)
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
     return text
 
 
 def write_data_txt(directory, file, text):
-    file_path = os.path.join(dir_pipeline, 'data', directory, file)
+    file_path = os.path.join(dir_pipeline, '../data', directory, file)
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(text)
     return

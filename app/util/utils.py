@@ -4,10 +4,10 @@ import json
 import tiktoken
 import spiceypy as spice
 from functools import wraps
-from app.utils import num_tokens_from_string
 
 
-dir_app = os.path.dirname(os.path.realpath(__file__))
+dir_util = os.path.dirname(os.path.realpath(__file__))
+dir_app = os.path.join(dir_util, '../')
 dir_pipeline = os.path.join(dir_app, '../')
 naif0012_tls_path = os.path.join(dir_pipeline, 'kernel', 'naif0012.tls')
 
@@ -26,14 +26,14 @@ def logger(func):
 
 # file interaction
 def read_storage_file(file, subdirectory=None):
-    file_path = os.path.join(dir_app, '../storage', file) if not subdirectory else os.path.join(dir_app, f'../storage/{subdirectory}', file)
+    file_path = os.path.join(dir_app, '../storage', file) if not subdirectory else os.path.join(dir_util, f'../storage/{subdirectory}', file)
     with open(file_path, 'r', encoding='utf-8') as file:
         result = json.load(file)
     return result
 
 
 def write_storage_file(data, file, subdirectory=None):
-    file_path = os.path.join(dir_app, '../storage', file) if not subdirectory else os.path.join(dir_app, f'../storage/{subdirectory}', file)
+    file_path = os.path.join(dir_app, '../storage', file) if not subdirectory else os.path.join(dir_util, f'../storage/{subdirectory}', file)
     with open(file_path, 'w', encoding='utf-8') as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
     return
@@ -89,7 +89,7 @@ def get_text_batches(raw_datum):
     return text_batches
 
 
-def calculate_token_limit(texts):
+def get_token_limit(texts):
     num_of_tokens_list = []
     for text in texts:
         num_of_tokens = len(tiktoken.get_encoding("cl100k_base").encode(text))
@@ -97,11 +97,23 @@ def calculate_token_limit(texts):
     return max(max(num_of_tokens_list), int(sum(num_of_tokens_list)/len(num_of_tokens_list)*10))
 
 
+def num_tokens_from_string(string, encoding_name):
+    encoding = tiktoken.get_encoding(encoding_name)
+    num_tokens = len(encoding.encode(string))
+    return num_tokens
+
+
 def get_url_existence(subject):
     urls = read_storage_file('url.json')
     target_url = next((url for url in urls if url.get("subject") == subject), None)
     url_existence = False if target_url is None else True
     return url_existence
+
+
+def split_by_newline(text):
+    texts = re.split(r'\r?\n|\r', text)
+    filtered_texts = [text.strip() for text in texts if text != ""]
+    return filtered_texts
 
 
 def get_is_date_valid(input_string):
@@ -141,5 +153,15 @@ def convert_date(date):
     return converted_date
 
 
-# processors
+def separate_events_by_validity(raw_events):
+    valid_raw_events = []
+    invalid_events = []
 
+    for event in raw_events:
+        is_date_valid = get_is_date_valid(event["date"])
+        if is_date_valid:
+            valid_raw_events.append(event)
+        else:
+            invalid_events.append(event)
+
+    return {"valid_raw_events": valid_raw_events, "invalid_events": invalid_events}

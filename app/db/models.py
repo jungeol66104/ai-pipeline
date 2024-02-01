@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, Float, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Text, Float, ForeignKey, DateTime, func
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -25,8 +25,8 @@ class Event(Base):
     date = Column(String(100))
     ephemeris_time = Column(Float)
     is_enabled = Column(Integer)
-    created_dt = Column(DateTime)
-    updated_dt = Column(DateTime)
+    created_dt = Column(DateTime, nullable=False, default=func.current_timestamp())
+    updated_dt = Column(DateTime, nullable=False, default=func.current_timestamp(), onupdate=func.current_timestamp())
 
 
 class EventTimeline(Base):
@@ -110,6 +110,9 @@ class InvalidEvents(Base):
     description = Column(Text)
     date = Column(String(100))
     importance = Column(Integer)
+    is_completed = Column(Integer, nullable=False, default=0)
+    created_dt = Column(DateTime, nullable=False, default=func.current_timestamp())
+    updated_dt = Column(DateTime, nullable=False, default=func.current_timestamp(), onupdate=func.current_timestamp())
 
 
 class PipelineModel(Base):
@@ -117,8 +120,8 @@ class PipelineModel(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(20))
-    created_dt = Column(DateTime)
-    updated_dt = Column(DateTime)
+    created_dt = Column(DateTime, nullable=False, default=func.current_timestamp())
+    updated_dt = Column(DateTime, nullable=False, default=func.current_timestamp(), onupdate=func.current_timestamp())
 
 
 class TrainingSet(Base):
@@ -129,8 +132,8 @@ class TrainingSet(Base):
     input = Column(Text)
     output = Column(Text)
     pipeline_model = relationship('PipelineModel')
-    created_dt = Column(DateTime)
-    updated_dt = Column(DateTime)
+    created_dt = Column(DateTime, nullable=False, default=func.current_timestamp())
+    updated_dt = Column(DateTime, nullable=False, default=func.current_timestamp(), onupdate=func.current_timestamp())
 
 
 class UserTimeline(Base):
@@ -140,5 +143,17 @@ class UserTimeline(Base):
     name = Column(Text)
     user_email = Column(String(30))
     is_completed = Column(Integer)
-    created_dt = Column(DateTime)
-    updated_dt = Column(DateTime)
+    created_dt = Column(DateTime, nullable=False, default=func.current_timestamp())
+    updated_dt = Column(DateTime, nullable=False, default=func.current_timestamp(), onupdate=func.current_timestamp())
+
+
+class SerpUrl(Base):
+    __tablename__ = 'serp_url'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    name = Column(String(200), nullable=False, default='')
+    url = Column(Text(30))
+    subject = Column(String(200), nullable=False, default='')
+    is_completed = Column(Integer, nullable=False, default=0)
+    created_dt = Column(DateTime, default=func.current_timestamp())
+    updated_dt = Column(DateTime, default=func.current_timestamp(), onupdate=func.current_timestamp())

@@ -1,4 +1,4 @@
-from app.db.uploader import uploader
+from app.db.uploaders import uploader
 from app.utils import modify_storage_file_list, read_storage_file, modify_storage_file_value, logger, write_storage_file
 # refactoring: clear
 
