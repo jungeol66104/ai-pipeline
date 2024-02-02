@@ -16,7 +16,9 @@ session = Session()
 def query_instance_by_id(table, target_id):
     return session.query(table).filter(table.id == target_id).first()
 
+
 query_invalid_event_by_id = lambda target_id: query_instance_by_id(InvalidEvents, target_id)
+query_serp_url_by_id = lambda target_id: query_instance_by_id(SerpUrl, target_id)
 
 
 def query_highest_column_value(column):
@@ -42,6 +44,10 @@ def query_invalid_event_by_subject(target_subject):
     return session.query(InvalidEvents).filter(InvalidEvents.subject == target_subject).first()
 
 
+def query_serp_urls_by_subject(target_subject):
+    return session.query(SerpUrl).filter(SerpUrl.subject == target_subject).all()
+
+
 # modify
 def complete_invalid_event_by_id(target_id):
     try:
@@ -51,6 +57,19 @@ def complete_invalid_event_by_id(target_id):
     except Exception as e:
         session.rollback()
         print(e)
+    return
+
+
+def complete_serp_urls_by_id(target_ids):
+    try:
+        for target_id in target_ids:
+            serp_url = query_serp_url_by_id(target_id)
+            serp_url.is_completed = 1
+        session.commit()
+    except Exception as e:
+        session.rollback()
+        print(e)
+
     return
 
 

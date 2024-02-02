@@ -1,27 +1,28 @@
+import os
 import requests
-from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+from app.db.session import query_serp_urls_by_subject, complete_serp_urls_by_id
 from app.util.utils import get_token_limit, read_storage_file, write_storage_file, logger, split_by_newline
 
 
+load_dotenv()
+SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
+
+
 @logger
-def url_crawler():
-    urls = read_storage_file('url.json')
-    target_url = urls[0]
-    response = requests.get(target_url["url"])
-
-    if response.status_code != 200:
-        print(f"Failed to fetch the webpage. Status code: {response.status_code}")
-        return
-
-    soup = BeautifulSoup(response.text, 'html.parser')
-    body = soup.find('body')
-    text = body.get_text()
-    texts = split_by_newline(text)
-
+def url_crawler(subject):
+    serp_urls = query_serp_urls_by_subject(subject)
     raw_data = read_storage_file('raw_data.json')
-    raw_data.append({"subject": target_url["subject"], "token_limit": get_token_limit(texts), "texts": texts})
+
+    for serp_url in serp_urls:
+        proxies = {
+            "https": f"scraperapi.country_code=us.device_type=desktop:{SCRAPER_API_KEY}@proxy-server.scraperapi.com:8001"
+        }
+        response = requests.get(serp_url, proxies=proxies, verify=False)
+        text = response.text
+        texts = split_by_newline(text)
+        raw_data.append({"subject": subject, "token_limit": get_token_limit(texts), "texts": texts})
 
     write_storage_file(raw_data, 'raw_data.json')
-    target_url["is_completed"] = True
-    write_storage_file(urls, 'url.json')
+    complete_serp_urls_by_id([serp_url["id"] for serp_url in serp_urls])
     return
