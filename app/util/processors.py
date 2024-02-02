@@ -1,5 +1,5 @@
 from app.db.session import query_timeline_by_name, query_highest_timeline_id, query_highest_event_id, query_highest_event_timeline_id
-from app.util.utils import logger, read_storage_file, get_ephemeris_time, modify_storage_file_list
+from app.util.utils import logger, read_storage_file, get_ephemeris_time, modify_storage_file_list, check_temporary_db
 
 
 @logger
@@ -9,9 +9,9 @@ def simaqian_processor(valid_raw_events, raw_timelines):
     events_from_temporary = temporary_db["event"]
     event_timelines_from_temporary = temporary_db["event_timeline"]
 
-    timeline_next_id = max(timelines_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(timelines_from_temporary) > 0 else query_highest_timeline_id + 1
-    event_next_id = max(events_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(events_from_temporary) > 0 else query_highest_event_id + 1
-    event_timeline_next_id = max(event_timelines_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(event_timelines_from_temporary) > 0 else query_highest_event_timeline_id + 1
+    timeline_next_id = max(timelines_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(timelines_from_temporary) > 0 else query_highest_timeline_id() + 1
+    event_next_id = max(events_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(events_from_temporary) > 0 else query_highest_event_id() + 1
+    event_timeline_next_id = max(event_timelines_from_temporary, key=lambda x: x['id'])['id'] + 1 if len(event_timelines_from_temporary) > 0 else query_highest_event_timeline_id() + 1
 
     timelines_for_db = []
     events_for_db = valid_raw_events[:]
@@ -45,10 +45,10 @@ def simaqian_processor(valid_raw_events, raw_timelines):
     return {"timelines_for_db": timelines_for_db, "events_for_db": events_for_db, "event_timelines_for_db": event_timelines_for_db}
 
 
-@logger
 def simaqian_temporary_uploader(timelines_for_db, events_for_db, event_timelines_for_db, invalid_events_for_db):
     modify_storage_file_list('db/timeline', timelines_for_db, 'temporary.json')
     modify_storage_file_list('db/event', events_for_db, 'temporary.json')
     modify_storage_file_list('db/event_timeline', event_timelines_for_db, 'temporary.json')
     modify_storage_file_list('db/invalid_events', invalid_events_for_db, 'temporary.json')
+    check_temporary_db()
     return

@@ -8,9 +8,9 @@ def invalid_crawler(subject):
     invalid_events = query_invalid_events_by_subject(subject)
 
     for invalid_event in invalid_events:
-        serp_crawler(subject, f'{invalid_event["name"]} exact date')
-        serp_crawler(subject, f'{invalid_event["name"]} timeline')
-        serp_crawler(subject, f'{invalid_event["name"]} chronology')
+        serp_crawler(subject, f'{invalid_event["name"]} {invalid_event["date"]} exact date')
+        serp_crawler(subject, f'{invalid_event["name"]} {invalid_event["date"]} timeline')
+        serp_crawler(subject, f'{invalid_event["name"]} {invalid_event["date"]} chronology')
     return
 
 

@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import tiktoken
 import spiceypy as spice
 from functools import wraps
@@ -16,9 +17,12 @@ naif0012_tls_path = os.path.join(dir_pipeline, 'kernel', 'naif0012.tls')
 def logger(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        print(f"\t{func.__name__} started.")
+        print(f"\t{func.__name__} start.")
+        start_time = time.time()
         output_data = func(*args, **kwargs)
-        print(f"\t{func.__name__} complete.")
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"\t{func.__name__} complete. ({elapsed_time})")
         return output_data
 
     return wrapper
@@ -54,18 +58,68 @@ def modify_storage_file_value(key_path, value, file, subdirectory=None):
 
 def modify_storage_file_list(key_path, value, file, subdirectory=None):
     result = read_storage_file(file, subdirectory)
-    keys = [prop.strip() for prop in key_path.split('/')]
-    target = result
-
-    for key in keys[:-1]:
-        if key in target:
-            target = target[key]
-    if isinstance(value, list):
-        target[keys[-1]].extend(value)
+    if len(key_path) == 0:
+        if isinstance(value, list):
+            result.extend(value)
+        else:
+            result.append(value)
     else:
-        target[keys[-1]].append(value)
+        keys = [prop.strip() for prop in key_path.split('/')]
+        target = result
+
+        for key in keys[:-1]:
+            if key in target:
+                target = target[key]
+
+        if isinstance(value, list):
+            target[keys[-1]].extend(value)
+        else:
+            target[keys[-1]].append(value)
     write_storage_file(result, file, subdirectory)
     return
+
+add_to_queue = lambda value: modify_storage_file_list('', value, 'queue.json')
+
+
+
+
+
+def reset():
+    temporary = {
+        "crawling_target": "",
+        "used_raw_datum_texts": [],
+        "db": {
+            "serp_url":[],
+            "timeline": [],
+            "event": [],
+            "event_timeline": [],
+            "invalid_events": [],
+            "training_set": []
+        }
+    }
+    write_storage_file(temporary, 'temporary.json')
+    write_storage_file([], 'raw_data.json')
+    return
+
+
+def check_temporary_db():
+    print('\n\tTEMPORARY DB')
+    temporary = read_storage_file('temporary.json')
+    db_keys = temporary["db"].keys()
+
+    for key in db_keys:
+        print(f"\t{key}: ", len(temporary["db"][key]))
+    print('\n')
+    return
+
+
+def check_queue():
+    print('\n\tQUEUE')
+    queue = read_storage_file('queue.json')
+    print(f"\tqueue: ", len(queue))
+    print('\n')
+    return
+
 
 
 # utils
@@ -85,7 +139,7 @@ def get_text_batches(raw_datum):
             else:
                 break
         text_batches.append(text_batch)
-        texts = texts[:last_index+1]
+        texts = texts[last_index+1:]
     return text_batches
 
 

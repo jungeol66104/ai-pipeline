@@ -52,13 +52,6 @@ def txt_organizer(directory, file, pattern, replace):
     write_data_txt(directory, file, text)
     return
 
-def reset_raw_data():
-    # raw_data = read_storage_file('raw_data.json')
-    # used_raw_datum_texts = read_storage_file('temporary.json')["used_raw_datum_texts"]
-    # raw_data[0]["texts"] = used_raw_datum_texts + raw_data[0]["texts"]
-    write_storage_file([], 'raw_data.json')
-    return
-
 def check_keys_validity():
     temporary_db = read_storage_file('temporary.json')["db"]
     for timeline in temporary_db["timeline"]:
@@ -82,32 +75,6 @@ def check_keys_validity():
     for fine_tuning_training_set in temporary_db["fine_tuning_training_set"]:
         if set(fine_tuning_training_set.keys()) != {"model", "input", "output"}:
             print("\tinvalid fine_tuning_training_set: ", fine_tuning_training_set)
-    return
-
-
-def reset_temporary():
-    temporary = {
-        "crawling_target": "",
-        "used_raw_datum_texts": [],
-        "db": {
-            "url":[],
-            "timeline": [],
-            "event": [],
-            "event_timeline": [],
-            "invalid_events": [],
-            "fine_tuning_training_set": []
-        }
-    }
-    write_storage_file(temporary, 'temporary.json')
-    return
-
-
-def check_temporary_db():
-    temporary = read_storage_file('temporary.json')
-    db_keys = temporary["db"].keys()
-
-    for key in db_keys:
-        print(f"\t{key}: ", len(temporary["db"][key]))
     return
 
 
