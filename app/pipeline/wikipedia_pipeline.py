@@ -6,16 +6,14 @@ from app.util.utils import read_storage_file, write_storage_file, logger
 
 @logger
 def wikipedia_pipeline():
-    count = 0
-    while count <= 1:
+    while bool(read_storage_file('queue.json')):
         queue = read_storage_file('queue.json')
         subject = queue[0]["subject"]
-        print(f'SUBJECT: {subject}')
+        print(f'\tSUBJECT: {subject}')
 
         wikipedia_crawler(subject)
         simaqian()
         simaqian_uploader()
 
         write_storage_file(queue[1:], 'queue.json')
-        count += 1
     return

@@ -38,8 +38,20 @@ def query_serp_urls_by_url(target_url):
     return session.query(SerpUrl).filter(SerpUrl.url == target_url).all()
 
 
-def query_invalid_events_by_subject(target_subject):
-    return session.query(InvalidEvents).filter(InvalidEvents.subject == target_subject).all()
+def query_invalid_event_by_subject(target_subject):
+    return session.query(InvalidEvents).filter(InvalidEvents.subject == target_subject).first()
+
+
+# modify
+def complete_invalid_event_by_id(target_id):
+    try:
+        invalid_event = query_invalid_event_by_id(target_id)
+        invalid_event.is_completed = 1
+        session.commit()
+    except Exception as e:
+        session.rollback()
+        print(e)
+    return
 
 
 # insert

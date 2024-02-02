@@ -1,6 +1,5 @@
 from app.ai.gpt import gpt
-from app.util.utils import modify_storage_file_list, read_storage_file, logger
-from app.util.utils import get_text_batches
+from app.util.utils import modify_storage_file_list, read_storage_file, logger, get_text_batches
 # refactoring: clear
 
 
@@ -8,7 +7,6 @@ from app.util.utils import get_text_batches
 def url_extractor():
     raw_data = read_storage_file('raw_data.json')
     serp_raw_data = [raw_datum for raw_datum in raw_data if raw_datum.get("type") == "serp"]
-    print(len(serp_raw_data))
 
     extracted_urls = []
     for serp_raw_datum in serp_raw_data:
@@ -22,7 +20,6 @@ def url_extractor():
             output_data[key]["subject"] = subject
             output_data[key]["is_completed"] = 0
         extracted_urls.extend(list(output_data.values()))
-        print(extracted_urls)
 
     temporary_db = read_storage_file('temporary.json')["db"]
     serp_urls_for_temporary = []
