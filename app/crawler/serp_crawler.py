@@ -27,7 +27,8 @@ def serp_crawler(subject, query):
     texts = [response_text]
 
     serp_keys = read_storage_file('serp_keys.json')
-    serp_keys = list(set(serp_keys.extend(keys)))
+    serp_keys.extend(list(keys))
+    serp_keys = list(set(serp_keys))
     write_storage_file(serp_keys, 'serp_keys.json')
 
     raw_data = read_storage_file('raw_data.json')

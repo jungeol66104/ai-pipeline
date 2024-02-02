@@ -7,17 +7,19 @@ from app.db.uploaders import url_uploader, simaqian_uploader
 
 
 def invalid_pipeline(subject):
+    count = 0
     while True:
         invalid_event = query_invalid_event_by_subject(subject)
-        if invalid_event is None:
+        if invalid_event is None or count == 1:
             break
 
-        invalid_crawler(invalid_event)
-        url_extractor()
-        url_uploader()
+        # invalid_crawler(invalid_event)
+        # url_extractor()
+        # url_uploader()
         url_crawler(subject)
         simaqian()
         simaqian_uploader()
 
         complete_invalid_event_by_id(invalid_event["id"])
+        count += 1
     return

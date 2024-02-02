@@ -4,7 +4,7 @@ from app.util.utils import add_to_queue, read_storage_file, get_text_batches, re
 
 def run_sub():
     # add_to_queue({'subject': 'Tsai Ing_wen'})
-    # reset()
+    reset()
     # check_temporary_db()
     # check_queue()
     # serp_crawler()
