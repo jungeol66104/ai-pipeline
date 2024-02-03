@@ -4,6 +4,7 @@ import json
 import time
 import tiktoken
 import spiceypy as spice
+from urllib.parse import urlparse, unquote
 from functools import wraps
 
 
@@ -81,9 +82,6 @@ def modify_storage_file_list(key_path, value, file, subdirectory=None):
 add_to_queue = lambda value: modify_storage_file_list('', value, 'queue.json')
 
 
-
-
-
 def reset():
     temporary = {
         "crawling_target": "",
@@ -119,7 +117,6 @@ def check_queue():
     print(f"\tqueue: ", len(queue))
     print('\n')
     return
-
 
 
 # utils
@@ -219,3 +216,20 @@ def separate_events_by_validity(raw_events):
             invalid_events.append(event)
 
     return {"valid_raw_events": valid_raw_events, "invalid_events": invalid_events}
+
+
+def is_wikipedia_url(url):
+    wikipedia_patterns = [
+        "https://en.wikipedia.org/wiki/",
+        "https://www.wikipedia.org/wiki/",
+    ]
+    return any(pattern in url for pattern in wikipedia_patterns)
+
+
+def get_wikipedia_title_from_url(url):
+    parsed_url = urlparse(url)
+    path = parsed_url.path
+    path_components = path.split("/")
+    last_component = path_components[-1]
+    title = unquote(last_component)
+    return title

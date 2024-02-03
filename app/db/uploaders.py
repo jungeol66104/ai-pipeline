@@ -11,7 +11,7 @@ def url_uploader():
 
     for serp_url_from_temporary in serp_urls_from_temporary:
         serp_urls_from_db = query_serp_urls_by_url(serp_url_from_temporary["url"])
-        serp_url_subjects_from_db = [serp_url_from_db["subject"] for serp_url_from_db in serp_urls_from_db]
+        serp_url_subjects_from_db = [serp_url_from_db.subject for serp_url_from_db in serp_urls_from_db]
         if serp_url_from_temporary["subject"] not in serp_url_subjects_from_db:
             serp_urls_for_db.append(serp_url_from_temporary)
 

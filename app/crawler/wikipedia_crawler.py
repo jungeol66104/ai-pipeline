@@ -12,7 +12,7 @@ def wikipedia_crawler(subject):
 
     # check for the same url that has the same subject from db
     serp_urls_from_db = query_serp_urls_by_url(canonical_url)
-    serp_url_subjects_from_db = [serp_url_from_db["subject"] for serp_url_from_db in serp_urls_from_db]
+    serp_url_subjects_from_db = [serp_url_from_db.subject for serp_url_from_db in serp_urls_from_db if serp_url_from_db.is_completed == 1]
     if subject in serp_url_subjects_from_db:
         return
 
@@ -22,5 +22,5 @@ def wikipedia_crawler(subject):
     raw_data = read_storage_file('raw_data.json')
     raw_data.append({"token_limit": get_token_limit(texts), "subject": subject, "texts": texts})
     write_storage_file(raw_data, 'raw_data.json')
-    modify_storage_file_list('db/serp_url', {"subject": subject, "name": f"{subject} - Wikipedia", "url": canonical_url, "is_completed": 1})
+    modify_storage_file_list('db/serp_url', {"subject": subject, "name": f"{subject} - Wikipedia", "url": canonical_url, "is_completed": 1}, 'temporary.json')
     return

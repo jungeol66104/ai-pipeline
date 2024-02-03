@@ -19,7 +19,12 @@ def url_extractor():
         for key in output_data.keys():
             output_data[key]["subject"] = subject
             output_data[key]["is_completed"] = 0
-        extracted_urls.extend(list(output_data.values()))
+
+        new_extracted_urls = list(output_data.values())
+        extracted_url_urls = [extracted_url["url"] for extracted_url in extracted_urls]
+        for new_extracted_url in new_extracted_urls:
+            if new_extracted_url["url"] not in extracted_url_urls:
+                extracted_urls.append(new_extracted_url)
 
     temporary_db = read_storage_file('temporary.json')["db"]
     serp_urls_for_temporary = []

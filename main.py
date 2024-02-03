@@ -1,11 +1,12 @@
 # refactoring: clear
+from app.pipeline.search_pipeline import search_pipeline
 
 
 def run_main():
     # pipelines
-    # basic_pipeline("Vladimir Putin")
     # wikipedia_pipeline()
-    # invalid_pipeline('Volodymyr Zelenskyy')
+    # invalid_pipeline('')
+    search_pipeline()
 
     # individuals
     # wikipedia_crawler("putin")
