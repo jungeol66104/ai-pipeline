@@ -1,7 +1,3 @@
-from app.crawler.wikipedia_crawler import wikipedia_crawler
-from app.pipeline.basic_pipeline import basic_pipeline
-from app.pipeline.invalid_pipeline import invalid_pipeline
-from app.pipeline.wikipedia_pipeline import wikipedia_pipeline
 # refactoring: clear
 
 

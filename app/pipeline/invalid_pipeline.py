@@ -12,10 +12,11 @@ def invalid_pipeline(subject):
         invalid_event = query_invalid_event_by_subject(subject)
         if invalid_event is None or count == 1:
             break
+        print(f'\tSUBJECT: {subject}')
 
-        # invalid_crawler(invalid_event)
-        # url_extractor()
-        # url_uploader()
+        invalid_crawler(invalid_event)
+        url_extractor()
+        url_uploader()
         url_crawler(subject)
         simaqian()
         simaqian_uploader()
