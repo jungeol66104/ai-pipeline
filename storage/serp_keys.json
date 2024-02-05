@@ -1,9 +1,9 @@
 [
-  "searchParameters",
-  "answerBox",
   "relatedSearches",
   "organic",
   "peopleAlsoAsk",
-  "searchInformation",
-  "knowledgeGraph"
+  "knowledgeGraph",
+  "answerBox",
+  "searchParameters",
+  "searchInformation"
 ]

@@ -13,7 +13,8 @@ def serp_crawler(subject, query):
     url = "https://google.serper.dev/search"
 
     payload = json.dumps({
-        "q": query
+        "q": query,
+        "num": 20
     })
     headers = {
         'X-API-KEY': SERPER_API_KEY,

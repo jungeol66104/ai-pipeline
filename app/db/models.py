@@ -12,6 +12,7 @@ class Timeline(Base):
     name = Column(String(200))
     description = Column(Text)
     image_url = Column(String(30))
+    is_enabled = Column(Integer)
     created_dt = Column(DateTime)
     updated_dt = Column(DateTime)
 

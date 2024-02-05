@@ -4,7 +4,7 @@ from app.util.utils import add_to_queue, read_storage_file, get_text_batches, re
 
 
 def run_sub():
-    # add_to_queue({'subject': 'Dotcom Bubble'})
+    add_to_queue({'subject': 'European Debt Crisis'})
     # reset()
     # check_temporary_db()
     # check_queue()
