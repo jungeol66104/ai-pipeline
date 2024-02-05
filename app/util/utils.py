@@ -84,8 +84,7 @@ add_to_queue = lambda value: modify_storage_file_list('', value, 'queue.json')
 
 def reset():
     temporary = {
-        "crawling_target": "",
-        "used_raw_datum_texts": [],
+        "main_subject": '',
         "db": {
             "serp_url":[],
             "timeline": [],
@@ -115,6 +114,14 @@ def check_queue():
     print('\n\tQUEUE')
     queue = read_storage_file('queue.json')
     print(f"\tqueue: ", len(queue))
+    print('\n')
+    return
+
+
+def check_raw_data():
+    print('\n\tRAW DATA')
+    raw_data = read_storage_file('raw_data.json')
+    print(f"\tsubjects: ", [raw_datum["subject"] for raw_datum in raw_data])
     print('\n')
     return
 
@@ -164,12 +171,18 @@ def get_url_existence(subject):
 def split_by_newline(text):
     texts = re.split(r'\r?\n|\r', text)
     filtered_texts = [text.strip() for text in texts if text != ""]
+    filtered_texts = [filtered_text for filtered_text in filtered_texts if filtered_text != ""]
     return filtered_texts
 
 
 def get_is_date_valid(input_string):
-    pattern = re.compile(r'^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$')
-    return bool(pattern.match(input_string))
+    try:
+        pattern = re.compile(r'^\d{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$')
+        return bool(pattern.match(input_string))
+    except Exception as e:
+        print("Error string: ", input_string)
+        print(f"Error occurred: {e}")
+        return False
 
 
 def get_ephemeris_time(date):
@@ -231,5 +244,27 @@ def get_wikipedia_title_from_url(url):
     path = parsed_url.path
     path_components = path.split("/")
     last_component = path_components[-1]
-    title = unquote(last_component)
+    title = unquote(last_component).replace('_', ' ')
     return title
+
+
+def is_black_listed_url(url):
+    black_list_patterns = [
+        "https://www.facebook.com/",
+        "https://www.instagram.com/",
+        "https://twitter.com/",
+        "https://x.com/",
+        "https://www.linkedin.com/",
+        "https://www.snapchat.com/",
+        "https://www.pinterest.com/",
+        "https://www.tumblr.com/",
+        "https://www.youtube.com/",
+        "https://www.whatsapp.com/",
+        "https://www.amazon.com/",
+        "https://www.alibaba.com/",
+        "https://www.timetoast.com/",
+        "https://www.shopify.com/",
+        "https://www.ebay.com",
+        "https://www.walmart.com"
+    ]
+    return any(pattern in url for pattern in black_list_patterns)

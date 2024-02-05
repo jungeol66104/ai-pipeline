@@ -19,6 +19,7 @@ def query_instance_by_id(table, target_id):
 
 query_invalid_event_by_id = lambda target_id: query_instance_by_id(InvalidEvents, target_id)
 query_serp_url_by_id = lambda target_id: query_instance_by_id(SerpUrl, target_id)
+query_timeline_by_id = lambda target_id: query_instance_by_id(Timeline, target_id)
 
 
 def query_highest_column_value(column):
@@ -69,7 +70,17 @@ def complete_serp_urls_by_id(target_ids):
     except Exception as e:
         session.rollback()
         print(e)
+    return
 
+
+def enable_timeline_by_id(target_id):
+    try:
+        timeline = query_timeline_by_id(target_id)
+        timeline.is_enabled = 1
+        session.commit()
+    except Exception as e:
+        session.rollback()
+        print(e)
     return
 
 

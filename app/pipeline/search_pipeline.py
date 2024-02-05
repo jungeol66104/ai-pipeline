@@ -3,7 +3,7 @@ from app.ai.url_extractor import url_extractor
 from app.crawler.subject_crawler import subject_crawler
 from app.crawler.url_crawler import url_crawler
 from app.db.uploaders import simaqian_uploader, url_uploader
-from app.util.utils import read_storage_file, write_storage_file
+from app.util.utils import read_storage_file, modify_storage_file_value
 
 
 def search_pipeline():
@@ -13,6 +13,7 @@ def search_pipeline():
         if bool(queue) is False or count == 1:
             break
         subject = queue[0]["subject"]
+        modify_storage_file_value('main_subject', subject, 'temporary.json')
         print(f'\tSUBJECT: {subject}')
 
         # subject_crawler(subject)
