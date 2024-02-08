@@ -5,6 +5,7 @@ from app.util.utils import logger, read_storage_file, get_ephemeris_time, modify
 
 @logger
 def simaqian_processor(valid_raw_events, raw_timelines):
+    print("\traw_timelines: ", raw_timelines)
     main_subject_from_temporary = read_storage_file('temporary.json')["main_subject"]
     temporary_db = read_storage_file('temporary.json')["db"]
     timelines_from_temporary = temporary_db["timeline"]

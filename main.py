@@ -1,5 +1,6 @@
 # refactoring: clear
 from app.pipeline.search_pipeline import search_pipeline
+from app.pipeline.wikipedia_pipeline import wikipedia_pipeline
 
 
 def run_main():

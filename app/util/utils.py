@@ -268,3 +268,7 @@ def is_black_listed_url(url):
         "https://www.walmart.com"
     ]
     return any(pattern in url for pattern in black_list_patterns)
+
+
+def is_pdf_url(url):
+    return url.lower().endswith('.pdf') or '/pdf/' in url.lower()

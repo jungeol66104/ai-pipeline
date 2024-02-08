@@ -3,7 +3,7 @@ from app.ai.url_extractor import url_extractor
 from app.crawler.subject_crawler import subject_crawler
 from app.crawler.url_crawler import url_crawler
 from app.db.uploaders import simaqian_uploader, url_uploader
-from app.util.utils import read_storage_file, modify_storage_file_value, write_storage_file
+from app.util.utils import read_storage_file, modify_storage_file_value, write_storage_file, reset
 
 
 def search_pipeline():
