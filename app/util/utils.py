@@ -298,9 +298,11 @@ def is_black_listed_url(url):
         "https://www.walmart.com/",
         "https://play.google.com/",
         "https://apps.apple.com/",
-        "https://www.youtube.com/"
-        "https://about.fb.com/"
-        "https://transparency.fb.com/"
+        "https://www.youtube.com/",
+        "https://about.fb.com/",
+        "https://transparency.fb.com/",
+        "https://www.researchgate.net/",
+        "https://support.microsoft.com/"
     ]
     return any(pattern in url for pattern in black_list_patterns)
 
