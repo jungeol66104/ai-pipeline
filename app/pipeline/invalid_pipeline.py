@@ -1,7 +1,7 @@
 from app.ai.simaqian import simaqian
 from app.ai.url_extractor import url_extractor
 from app.crawler.invalid_crawler import invalid_crawler
-from app.crawler.url_crawler import url_crawler
+from app.crawler.subject_url_crawler import subject_url_crawler
 from app.db.session import query_invalid_event_by_subject, complete_invalid_event_by_id
 from app.db.uploaders import url_uploader, simaqian_uploader
 
@@ -17,7 +17,7 @@ def invalid_pipeline(subject):
         invalid_crawler(invalid_event)
         url_extractor()
         url_uploader()
-        url_crawler(subject)
+        subject_url_crawler(subject)
         simaqian()
         simaqian_uploader()
 

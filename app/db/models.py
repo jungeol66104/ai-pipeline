@@ -158,3 +158,13 @@ class SerpUrl(Base):
     is_completed = Column(Integer, nullable=False, default=0)
     created_dt = Column(DateTime, default=func.current_timestamp())
     updated_dt = Column(DateTime, default=func.current_timestamp(), onupdate=func.current_timestamp())
+
+
+class Queue(Base):
+    __tablename__ = 'queue'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    subject = Column(String(200), nullable=False, default='')
+    complete = Column(Integer, nullable=False, default=0)
+    created_dt = Column(DateTime, default=func.current_timestamp())
+    updated_dt = Column(DateTime, default=func.current_timestamp(), onupdate=func.current_timestamp())

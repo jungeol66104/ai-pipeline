@@ -5,7 +5,6 @@ from app.util.utils import logger, read_storage_file, get_ephemeris_time, modify
 
 @logger
 def simaqian_processor(valid_raw_events, raw_timelines):
-    print("\traw_timelines: ", raw_timelines)
     main_subject_from_temporary = read_storage_file('temporary.json')["main_subject"]
     temporary_db = read_storage_file('temporary.json')["db"]
     timelines_from_temporary = temporary_db["timeline"]
@@ -44,7 +43,7 @@ def simaqian_processor(valid_raw_events, raw_timelines):
         event_id = event_next_id
         event["id"] = event_id
         event["ephemeris_time"] = get_ephemeris_time(event["date"])
-        event["is_enabled"] = is_enabled
+        event["is_enabled"] = 1
         event_next_id += 1
 
         # deal with association

@@ -1,9 +1,11 @@
+import json
 import os
 from dotenv import load_dotenv
 from sqlalchemy import func
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.db.models import Timeline, Event, EventTimeline, InvalidEvents, TrainingSet, SerpUrl
+from app.util.utils import modify_storage_file_list
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -13,6 +15,21 @@ session = Session()
 
 
 # query
+def query_instance(table, **kwargs):
+    query = session.query(table)
+
+    for key, value in kwargs.items():
+        query = query.filter(getattr(table, key) == value)
+
+    return query.first()
+
+query_invalid_event_by_id = lambda target_id: query_instance(InvalidEvents, id=target_id)
+query_serp_url_by_id = lambda target_id: query_instance(SerpUrl, id=target_id)
+query_timeline_by_id = lambda target_id: query_instance(Timeline, id=target_id)
+
+def query_instance_by_complete(table):
+    return session.query(table).filter(table.complete == 0).first()
+
 def query_instance_by_id(table, target_id):
     return session.query(table).filter(table.id == target_id).first()
 
@@ -91,6 +108,7 @@ def insert_data(table, data):
         session.commit()
     except Exception as e:
         session.rollback()
+        modify_storage_file_list('', {"table": table, "data": json.dumps(data)}, 'errors.json')
         print(e)
     return
 

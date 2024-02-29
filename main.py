@@ -1,6 +1,6 @@
-# refactoring: clear
 from app.pipeline.search_pipeline import search_pipeline
 from app.pipeline.wikipedia_pipeline import wikipedia_pipeline
+# refactoring: clear
 
 
 def run_main():
@@ -10,7 +10,7 @@ def run_main():
     search_pipeline()
 
     # individuals
-    # wikipedia_crawler("putin")
+    # wikipedia_crawler("")
     return
 
 

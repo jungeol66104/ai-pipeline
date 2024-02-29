@@ -14,7 +14,7 @@ def serp_crawler(subject, query):
 
     payload = json.dumps({
         "q": query,
-        "num": 20
+        "num": 10
     })
     headers = {
         'X-API-KEY': SERPER_API_KEY,
@@ -32,7 +32,5 @@ def serp_crawler(subject, query):
     serp_keys = list(set(serp_keys))
     write_storage_file(serp_keys, 'serp_keys.json')
 
-    raw_data = read_storage_file('raw_data.json')
-    raw_data.append({"type": "serp", "token_limit": get_token_limit(texts), "subject": subject, "texts": texts})
-    write_storage_file(raw_data, 'raw_data.json')
+    modify_storage_file_list('', {"type": "serp", "token_limit": get_token_limit(texts), "subject": subject, "texts": texts}, 'raw_data.json')
     return

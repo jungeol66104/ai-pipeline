@@ -5,9 +5,12 @@ from app.util.utils import read_storage_file, write_storage_file, logger, split_
 
 
 @logger
-def wikipedia_crawler(subject):
+def wikipedia_crawler(subject, query=None):
+    if query is None:
+        query = subject
+
     wiki = wikipediaapi.Wikipedia('testBot/0.0', 'en')
-    page = wiki.page(subject)
+    page = wiki.page(query)
     canonical_url = page.canonicalurl
 
     # check for the same url that has the same subject from db
@@ -19,8 +22,6 @@ def wikipedia_crawler(subject):
     text = page.text
     texts = split_by_newline(text)
 
-    raw_data = read_storage_file('raw_data.json')
-    raw_data.append({"token_limit": get_token_limit(texts), "subject": subject, "texts": texts})
-    write_storage_file(raw_data, 'raw_data.json')
+    modify_storage_file_list('', {"token_limit": get_token_limit(texts), "subject": subject, "texts": texts}, 'raw_data.json')
     modify_storage_file_list('db/serp_url', {"subject": subject, "name": f"{subject} - Wikipedia", "url": canonical_url, "is_completed": 1}, 'temporary.json')
     return

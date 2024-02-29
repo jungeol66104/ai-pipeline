@@ -1,9 +1,11 @@
 [
-  "searchParameters",
-  "knowledgeGraph",
-  "relatedSearches",
-  "searchInformation",
+  "statusCode",
   "answerBox",
+  "searchParameters",
+  "relatedSearches",
+  "organic",
   "peopleAlsoAsk",
-  "organic"
+  "knowledgeGraph",
+  "message",
+  "searchInformation"
 ]

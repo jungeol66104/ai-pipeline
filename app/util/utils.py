@@ -106,7 +106,7 @@ def check_temporary_db():
 
     for key in db_keys:
         print(f"\t{key}: ", len(temporary["db"][key]))
-    print('\n')
+    print('')
     return
 
 
@@ -148,11 +148,17 @@ def get_text_batches(raw_datum):
 
 
 def get_token_limit(texts):
+    token_limit = 500
     num_of_tokens_list = []
-    for text in texts:
-        num_of_tokens = len(tiktoken.get_encoding("cl100k_base").encode(text))
-        num_of_tokens_list.append(num_of_tokens)
-    return max(max(num_of_tokens_list), int(sum(num_of_tokens_list)/len(num_of_tokens_list)*10))
+    try:
+        for text in texts:
+            num_of_tokens = len(tiktoken.get_encoding("cl100k_base").encode(text))
+            num_of_tokens_list.append(num_of_tokens)
+        token_limit = max(max(num_of_tokens_list), int(sum(num_of_tokens_list)/len(num_of_tokens_list)*10))
+        return token_limit
+    except Exception as e:
+        print(e)
+        return token_limit
 
 
 def num_tokens_from_string(string, encoding_name):
@@ -186,9 +192,13 @@ def get_is_date_valid(input_string):
 
 
 def get_ephemeris_time(date):
-    file_path = naif0012_tls_path
-    spice.furnsh(file_path)
-    return spice.str2et(convert_date(date))
+    try:
+        file_path = naif0012_tls_path
+        spice.furnsh(file_path)
+        return spice.str2et(convert_date(date))
+    except Exception as e:
+        print(e)
+        return None
 
 
 def convert_date(date):
@@ -221,9 +231,28 @@ def separate_events_by_validity(raw_events):
     valid_raw_events = []
     invalid_events = []
 
-    for event in raw_events:
-        is_date_valid = get_is_date_valid(event["date"])
-        if is_date_valid:
+    for i, event in enumerate(raw_events):
+        # for string events, just dismiss it
+        if isinstance(event, str):
+            modify_storage_file_list('', {"str_event": event}, 'errors.json')
+            continue
+        for key, value in event.items():
+            if isinstance(value, list):
+                if value:
+                    event[key] = value[0]
+                else:
+                    event[key] = 'None'
+
+        if "subject" not in event:
+            event["subject"] = "None"
+            is_valid = False
+        elif "date" in event:
+            is_valid = get_is_date_valid(event["date"])
+        else:
+            event["date"] = "None"
+            is_valid = False
+
+        if is_valid:
             valid_raw_events.append(event)
         else:
             invalid_events.append(event)
@@ -250,6 +279,7 @@ def get_wikipedia_title_from_url(url):
 
 def is_black_listed_url(url):
     black_list_patterns = [
+        "https://timeline.vg/"
         "https://www.facebook.com/",
         "https://www.instagram.com/",
         "https://twitter.com/",
@@ -264,8 +294,13 @@ def is_black_listed_url(url):
         "https://www.alibaba.com/",
         "https://www.timetoast.com/",
         "https://www.shopify.com/",
-        "https://www.ebay.com",
-        "https://www.walmart.com"
+        "https://www.ebay.com/",
+        "https://www.walmart.com/",
+        "https://play.google.com/",
+        "https://apps.apple.com/",
+        "https://www.youtube.com/"
+        "https://about.fb.com/"
+        "https://transparency.fb.com/"
     ]
     return any(pattern in url for pattern in black_list_patterns)
 
