@@ -1,23 +1,36 @@
+import os
+import json
 import requests
-from bs4 import BeautifulSoup
-from app.util.utils import get_token_limit, read_storage_file, write_storage_file, logger
+from dotenv import load_dotenv
+from app.util.utils import get_token_limit, read_storage_file, write_storage_file, logger, modify_storage_file_list
+
+load_dotenv()
+SERPER_API_KEY = os.getenv("SERPER_API_KEY")
 
 
 @logger
 def serp_crawler(subject, query):
-    target_url = f'https://www.google.com/search?q={query.replace(" ", "+")}'
-    response = requests.get(target_url)
+    url = "https://google.serper.dev/search"
 
-    if response.status_code != 200:
-        print(f"Failed to fetch the webpage. Status code: {response.status_code}")
-        return
+    payload = json.dumps({
+        "q": query,
+        "num": 10
+    })
+    headers = {
+        'X-API-KEY': SERPER_API_KEY,
+        'Content-Type': 'application/json'
+    }
 
-    soup = BeautifulSoup(response.text, 'html.parser')
-    body = soup.find('body')
-    text = body.get_text()
-    texts = [text]
+    response = requests.request("POST", url, headers=headers, data=payload)
+    response_json = response.json()
+    response_text = response.text
+    keys = response_json.keys()
+    texts = [response_text]
 
-    raw_data = read_storage_file('raw_data.json')
-    raw_data.append({"type": "serp", "token_limit": get_token_limit(texts), "subject": subject, "texts": texts})
-    write_storage_file(raw_data, 'raw_data.json')
+    serp_keys = read_storage_file('serp_keys.json')
+    serp_keys.extend(list(keys))
+    serp_keys = list(set(serp_keys))
+    write_storage_file(serp_keys, 'serp_keys.json')
+
+    modify_storage_file_list('', {"type": "serp", "token_limit": get_token_limit(texts), "subject": subject, "texts": texts}, 'raw_data.json')
     return

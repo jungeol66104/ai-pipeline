@@ -1,11 +1,18 @@
-from app.pipeline.basic_pipeline import basic_pipeline
+from app.pipeline.search_pipeline import search_pipeline
+from app.pipeline.wikipedia_pipeline import wikipedia_pipeline
 # refactoring: clear
 
 
-def run():
-    basic_pipeline("Vladimir Putin")
+def run_main():
+    # pipelines
+    # wikipedia_pipeline()
+    # invalid_pipeline('')
+    search_pipeline()
+
+    # individuals
+    # wikipedia_crawler("")
     return
 
 
 if __name__ == "__main__":
-    run()
+    run_main()

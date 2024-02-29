@@ -12,6 +12,7 @@ class Timeline(Base):
     name = Column(String(200))
     description = Column(Text)
     image_url = Column(String(30))
+    is_enabled = Column(Integer)
     created_dt = Column(DateTime)
     updated_dt = Column(DateTime)
 
@@ -155,5 +156,15 @@ class SerpUrl(Base):
     url = Column(Text(30))
     subject = Column(String(200), nullable=False, default='')
     is_completed = Column(Integer, nullable=False, default=0)
+    created_dt = Column(DateTime, default=func.current_timestamp())
+    updated_dt = Column(DateTime, default=func.current_timestamp(), onupdate=func.current_timestamp())
+
+
+class Queue(Base):
+    __tablename__ = 'queue'
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    subject = Column(String(200), nullable=False, default='')
+    complete = Column(Integer, nullable=False, default=0)
     created_dt = Column(DateTime, default=func.current_timestamp())
     updated_dt = Column(DateTime, default=func.current_timestamp(), onupdate=func.current_timestamp())
