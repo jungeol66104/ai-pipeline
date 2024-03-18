@@ -1,11 +1,12 @@
 [
-  "statusCode",
-  "answerBox",
-  "searchParameters",
   "relatedSearches",
-  "organic",
-  "peopleAlsoAsk",
-  "knowledgeGraph",
   "message",
-  "searchInformation"
+  "organic",
+  "topStories",
+  "knowledgeGraph",
+  "peopleAlsoAsk",
+  "searchInformation",
+  "statusCode",
+  "searchParameters",
+  "answerBox"
 ]
