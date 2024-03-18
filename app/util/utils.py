@@ -292,7 +292,7 @@ def is_black_listed_url(url):
         "https://www.whatsapp.com/",
         "https://www.amazon.com/",
         "https://www.alibaba.com/",
-        "https://www.timetoast.com/",
+        # "https://www.timetoast.com/",
         "https://www.shopify.com/",
         "https://www.ebay.com/",
         "https://www.walmart.com/",
@@ -302,7 +302,8 @@ def is_black_listed_url(url):
         "https://about.fb.com/",
         "https://transparency.fb.com/",
         "https://www.researchgate.net/",
-        "https://support.microsoft.com/"
+        "https://support.microsoft.com/",
+        "https://www.imdb.com/"
     ]
     return any(pattern in url for pattern in black_list_patterns)
 
